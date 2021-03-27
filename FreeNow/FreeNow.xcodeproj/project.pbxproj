@@ -12,6 +12,9 @@
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
 		587B7E52260F7E6000C154AC /* FreeNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E51260F7E6000C154AC /* FreeNowTests.swift */; };
 		587B7E5D260F7E6000C154AC /* FreeNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E5C260F7E6000C154AC /* FreeNowUITests.swift */; };
+		587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E7D260FC31600C154AC /* DriversListViewController.swift */; };
+		587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E7E260FC31600C154AC /* DriversListViewController.xib */; };
+		587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E87260FC35C00C154AC /* DriversConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		587B7E58260F7E6000C154AC /* FreeNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E5C260F7E6000C154AC /* FreeNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowUITests.swift; sourceTree = "<group>"; };
 		587B7E5E260F7E6000C154AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		587B7E7D260FC31600C154AC /* DriversListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListViewController.swift; sourceTree = "<group>"; };
+		587B7E7E260FC31600C154AC /* DriversListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversListViewController.xib; sourceTree = "<group>"; };
+		587B7E87260FC35C00C154AC /* DriversConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +99,8 @@
 		587B7E39260F7E5F00C154AC /* FreeNow */ = {
 			isa = PBXGroup;
 			children = (
-				587B7E3A260F7E5F00C154AC /* AppDelegate.swift */,
-				587B7E43260F7E6000C154AC /* Assets.xcassets */,
-				587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */,
-				587B7E48260F7E6000C154AC /* Info.plist */,
+				587B7E79260F876D00C154AC /* Application */,
+				587B7E7A260FC2D700C154AC /* Module */,
 			);
 			path = FreeNow;
 			sourceTree = "<group>";
@@ -117,6 +121,43 @@
 				587B7E5E260F7E6000C154AC /* Info.plist */,
 			);
 			path = FreeNowUITests;
+			sourceTree = "<group>";
+		};
+		587B7E79260F876D00C154AC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				587B7E3A260F7E5F00C154AC /* AppDelegate.swift */,
+				587B7E43260F7E6000C154AC /* Assets.xcassets */,
+				587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */,
+				587B7E48260F7E6000C154AC /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		587B7E7A260FC2D700C154AC /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				587B7E7B260FC2E400C154AC /* Drivers List */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		587B7E7B260FC2E400C154AC /* Drivers List */ = {
+			isa = PBXGroup;
+			children = (
+				587B7E7C260FC2F900C154AC /* View */,
+				587B7E87260FC35C00C154AC /* DriversConfigurator.swift */,
+			);
+			path = "Drivers List";
+			sourceTree = "<group>";
+		};
+		587B7E7C260FC2F900C154AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				587B7E7D260FC31600C154AC /* DriversListViewController.swift */,
+				587B7E7E260FC31600C154AC /* DriversListViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +265,7 @@
 			files = (
 				587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */,
 				587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */,
+				587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */,
+				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,
 				587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +462,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6NX9Q8Y2Y;
-				INFOPLIST_FILE = FreeNow/Info.plist;
+				INFOPLIST_FILE = FreeNow/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6NX9Q8Y2Y;
-				INFOPLIST_FILE = FreeNow/Info.plist;
+				INFOPLIST_FILE = FreeNow/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

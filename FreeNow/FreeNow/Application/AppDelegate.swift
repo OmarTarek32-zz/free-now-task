@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func startFlow() {
-        window?.rootViewController = UIViewController() //TODO - add starting view
+        window?.rootViewController = DriverConfigurator.asymble(type: .listView)
         window?.makeKeyAndVisible()
     }
 

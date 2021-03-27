@@ -15,6 +15,9 @@
 		587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E7D260FC31600C154AC /* DriversListViewController.swift */; };
 		587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E7E260FC31600C154AC /* DriversListViewController.xib */; };
 		587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E87260FC35C00C154AC /* DriversConfigurator.swift */; };
+		9E26236F533097A7A6B367AB /* Pods_FreeNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C7C4BC60E6E4BC8014B738 /* Pods_FreeNow.framework */; };
+		CF31BA114E2AA7D2FA6FA4E3 /* Pods_FreeNow_FreeNowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722D273B58676E8465E3AD93 /* Pods_FreeNow_FreeNowUITests.framework */; };
+		E228A4C078B70161AE2C6CBA /* Pods_FreeNowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45BCCB9AE2358CDCF3D8511 /* Pods_FreeNowTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14C927785EAD058A3CA8299D /* Pods-FreeNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNow.release.xcconfig"; path = "Target Support Files/Pods-FreeNow/Pods-FreeNow.release.xcconfig"; sourceTree = "<group>"; };
+		24B286D53097E90790D77417 /* Pods-FreeNowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNowTests.release.xcconfig"; path = "Target Support Files/Pods-FreeNowTests/Pods-FreeNowTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F0D62DFC7C5DC245F0C74E5 /* Pods-FreeNowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNowTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeNowTests/Pods-FreeNowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		587B7E7D260FC31600C154AC /* DriversListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListViewController.swift; sourceTree = "<group>"; };
 		587B7E7E260FC31600C154AC /* DriversListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversListViewController.xib; sourceTree = "<group>"; };
 		587B7E87260FC35C00C154AC /* DriversConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversConfigurator.swift; sourceTree = "<group>"; };
+		722D273B58676E8465E3AD93 /* Pods_FreeNow_FreeNowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeNow_FreeNowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		789B3226EB2F05527B4D2E8C /* Pods-FreeNow-FreeNowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNow-FreeNowUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeNow-FreeNowUITests/Pods-FreeNow-FreeNowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84AA1EA5DCB21209BA8299FC /* Pods-FreeNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNow.debug.xcconfig"; path = "Target Support Files/Pods-FreeNow/Pods-FreeNow.debug.xcconfig"; sourceTree = "<group>"; };
+		B3C7C4BC60E6E4BC8014B738 /* Pods_FreeNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6CCA17A8F155276F468988 /* Pods-FreeNow-FreeNowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeNow-FreeNowUITests.release.xcconfig"; path = "Target Support Files/Pods-FreeNow-FreeNowUITests/Pods-FreeNow-FreeNowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D45BCCB9AE2358CDCF3D8511 /* Pods_FreeNowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeNowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E26236F533097A7A6B367AB /* Pods_FreeNow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E228A4C078B70161AE2C6CBA /* Pods_FreeNowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF31BA114E2AA7D2FA6FA4E3 /* Pods_FreeNow_FreeNowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				587B7E50260F7E6000C154AC /* FreeNowTests */,
 				587B7E5B260F7E6000C154AC /* FreeNowUITests */,
 				587B7E38260F7E5F00C154AC /* Products */,
+				7E1A72E44637FFAA4BD28C82 /* Pods */,
+				D49BA5291FB108BC4C50154E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +177,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7E1A72E44637FFAA4BD28C82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84AA1EA5DCB21209BA8299FC /* Pods-FreeNow.debug.xcconfig */,
+				14C927785EAD058A3CA8299D /* Pods-FreeNow.release.xcconfig */,
+				789B3226EB2F05527B4D2E8C /* Pods-FreeNow-FreeNowUITests.debug.xcconfig */,
+				BB6CCA17A8F155276F468988 /* Pods-FreeNow-FreeNowUITests.release.xcconfig */,
+				3F0D62DFC7C5DC245F0C74E5 /* Pods-FreeNowTests.debug.xcconfig */,
+				24B286D53097E90790D77417 /* Pods-FreeNowTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D49BA5291FB108BC4C50154E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C4BC60E6E4BC8014B738 /* Pods_FreeNow.framework */,
+				722D273B58676E8465E3AD93 /* Pods_FreeNow_FreeNowUITests.framework */,
+				D45BCCB9AE2358CDCF3D8511 /* Pods_FreeNowTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 587B7E61260F7E6000C154AC /* Build configuration list for PBXNativeTarget "FreeNow" */;
 			buildPhases = (
+				53389EBEABE21FD4C8A86953 /* [CP] Check Pods Manifest.lock */,
 				587B7E33260F7E5F00C154AC /* Sources */,
 				587B7E34260F7E5F00C154AC /* Frameworks */,
 				587B7E35260F7E5F00C154AC /* Resources */,
+				FCDA198DB7035D158A07739D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 587B7E64260F7E6000C154AC /* Build configuration list for PBXNativeTarget "FreeNowTests" */;
 			buildPhases = (
+				48DD0E99DB6B089B782872DA /* [CP] Check Pods Manifest.lock */,
 				587B7E49260F7E6000C154AC /* Sources */,
 				587B7E4A260F7E6000C154AC /* Frameworks */,
 				587B7E4B260F7E6000C154AC /* Resources */,
@@ -202,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 587B7E67260F7E6000C154AC /* Build configuration list for PBXNativeTarget "FreeNowUITests" */;
 			buildPhases = (
+				2E80E0C104D076EA7B60742E /* [CP] Check Pods Manifest.lock */,
 				587B7E54260F7E6000C154AC /* Sources */,
 				587B7E55260F7E6000C154AC /* Frameworks */,
 				587B7E56260F7E6000C154AC /* Resources */,
+				BA7C89E5A8C0468DB0F64DF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +330,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E80E0C104D076EA7B60742E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeNow-FreeNowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48DD0E99DB6B089B782872DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeNowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53389EBEABE21FD4C8A86953 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeNow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA7C89E5A8C0468DB0F64DF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeNow-FreeNowUITests/Pods-FreeNow-FreeNowUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeNow-FreeNowUITests/Pods-FreeNow-FreeNowUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeNow-FreeNowUITests/Pods-FreeNow-FreeNowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCDA198DB7035D158A07739D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeNow/Pods-FreeNow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeNow/Pods-FreeNow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeNow/Pods-FreeNow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		587B7E33260F7E5F00C154AC /* Sources */ = {
@@ -457,6 +606,7 @@
 		};
 		587B7E62260F7E6000C154AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84AA1EA5DCB21209BA8299FC /* Pods-FreeNow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -476,6 +626,7 @@
 		};
 		587B7E63260F7E6000C154AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C927785EAD058A3CA8299D /* Pods-FreeNow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +646,7 @@
 		};
 		587B7E65260F7E6000C154AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0D62DFC7C5DC245F0C74E5 /* Pods-FreeNowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +669,7 @@
 		};
 		587B7E66260F7E6000C154AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B286D53097E90790D77417 /* Pods-FreeNowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +692,7 @@
 		};
 		587B7E68260F7E6000C154AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 789B3226EB2F05527B4D2E8C /* Pods-FreeNow-FreeNowUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,6 +713,7 @@
 		};
 		587B7E69260F7E6000C154AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6CCA17A8F155276F468988 /* Pods-FreeNow-FreeNowUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

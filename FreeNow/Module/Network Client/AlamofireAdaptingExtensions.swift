@@ -49,7 +49,7 @@ extension Session {
 
 extension DataRequest {
     @discardableResult
-    func responseObject<ResponsType: Model>(_:ResponsType.Type, compeletion: @escaping (Result<ResponsType, Error>) -> Void) -> Self {
+    func responseObject<ResponsType: Model>(compeletion: @escaping (Result<ResponsType, Error>) -> Void) -> Self {
         
         responseString { response in
             
@@ -58,7 +58,7 @@ extension DataRequest {
                 
                 debugPrint(jsonString)
                 guard let jsonData = jsonString.data(using: .utf8),
-                      let drivers = try? JSONDecoder().decode(Drivers.self, from: jsonData) as? ResponsType
+                      let drivers = try? JSONDecoder().decode(ResponsType.self, from: jsonData)
                 else {
                     compeletion(Result.failure(AlamofireCustomError.canNotDecodeObject))
                     return

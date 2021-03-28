@@ -32,5 +32,5 @@ protocol RequestProtocol {
 protocol Model: Codable {}
 
 protocol APICleintProtocol {
-    func send<ResponsType>(request: RequestProtocol, for type: ResponsType.Type ,compeletion: @escaping (Result<ResponsType, Error>) -> Void) where ResponsType: Model
+    func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, Error>) -> Void) where ResponsType: Model
 }

@@ -17,8 +17,8 @@ class APICleint {
 
 extension APICleint: APICleintProtocol {
     
-    func send<ResponsType>(request: RequestProtocol, for type: ResponsType.Type ,compeletion: @escaping (Result<ResponsType, Error>) -> Void) where ResponsType: Model {
-        
-        Session.default.request(request).validate().responseObject(ResponsType.self, compeletion: compeletion)
+    func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, Error>) -> Void) where ResponsType : Model {
+        Session.default.request(request).validate().responseObject(compeletion: compeletion)
     }
+
 }

@@ -10,7 +10,9 @@
 		5815A983260FCDF300D28F3A /* APICleintProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A982260FCDF300D28F3A /* APICleintProtocols.swift */; };
 		5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9AA260FD2A900D28F3A /* APICleint.swift */; };
 		5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9AF260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift */; };
-		5815A9C2260FF7CA00D28F3A /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9C1260FF7CA00D28F3A /* Driver.swift */; };
+		5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9C1260FF7CA00D28F3A /* DriversModel.swift */; };
+		5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9E1261115D800D28F3A /* DriversRepository.swift */; };
+		5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9E92611168D00D28F3A /* DriversRequest.swift */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
 		587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E43260F7E6000C154AC /* Assets.xcassets */; };
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
@@ -48,7 +50,9 @@
 		5815A982260FCDF300D28F3A /* APICleintProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICleintProtocols.swift; sourceTree = "<group>"; };
 		5815A9AA260FD2A900D28F3A /* APICleint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICleint.swift; sourceTree = "<group>"; };
 		5815A9AF260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdaptingExtensions.swift; sourceTree = "<group>"; };
-		5815A9C1260FF7CA00D28F3A /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		5815A9C1260FF7CA00D28F3A /* DriversModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversModel.swift; sourceTree = "<group>"; };
+		5815A9E1261115D800D28F3A /* DriversRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRepository.swift; sourceTree = "<group>"; };
+		5815A9E92611168D00D28F3A /* DriversRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRequest.swift; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,7 +187,9 @@
 			children = (
 				587B7E7C260FC2F900C154AC /* View */,
 				587B7E87260FC35C00C154AC /* DriversConfigurator.swift */,
-				5815A9C1260FF7CA00D28F3A /* Driver.swift */,
+				5815A9C1260FF7CA00D28F3A /* DriversModel.swift */,
+				5815A9E1261115D800D28F3A /* DriversRepository.swift */,
+				5815A9E92611168D00D28F3A /* DriversRequest.swift */,
 			);
 			path = "Drivers List";
 			sourceTree = "<group>";
@@ -459,7 +465,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */,
-				5815A9C2260FF7CA00D28F3A /* Driver.swift in Sources */,
+				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,
+				5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */,
+				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,
 				5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */,
 				5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */,
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,

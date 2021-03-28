@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func startFlow() {
-        window?.rootViewController = DriverConfigurator.asymble(type: .listView)
+        window?.rootViewController = DriverConfigurator.asymble(type: .mapView)
         window?.makeKeyAndVisible()
     }
 

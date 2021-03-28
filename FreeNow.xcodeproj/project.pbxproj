@@ -13,6 +13,8 @@
 		5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9C1260FF7CA00D28F3A /* DriversModel.swift */; };
 		5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9E1261115D800D28F3A /* DriversRepository.swift */; };
 		5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A9E92611168D00D28F3A /* DriversRequest.swift */; };
+		5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815AA0A2611366400D28F3A /* DriversMapViewController.swift */; };
+		5815AA0D2611366400D28F3A /* DriversMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5815AA0B2611366400D28F3A /* DriversMapViewController.xib */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
 		587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E43260F7E6000C154AC /* Assets.xcassets */; };
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
@@ -53,6 +55,8 @@
 		5815A9C1260FF7CA00D28F3A /* DriversModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversModel.swift; sourceTree = "<group>"; };
 		5815A9E1261115D800D28F3A /* DriversRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRepository.swift; sourceTree = "<group>"; };
 		5815A9E92611168D00D28F3A /* DriversRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRequest.swift; sourceTree = "<group>"; };
+		5815AA0A2611366400D28F3A /* DriversMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapViewController.swift; sourceTree = "<group>"; };
+		5815AA0B2611366400D28F3A /* DriversMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversMapViewController.xib; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +115,24 @@
 				5815A9AF260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift */,
 			);
 			path = "Network Client";
+			sourceTree = "<group>";
+		};
+		5815AA052611361E00D28F3A /* Driver List View */ = {
+			isa = PBXGroup;
+			children = (
+				587B7E7D260FC31600C154AC /* DriversListViewController.swift */,
+				587B7E7E260FC31600C154AC /* DriversListViewController.xib */,
+			);
+			path = "Driver List View";
+			sourceTree = "<group>";
+		};
+		5815AA092611362C00D28F3A /* Drivers Map View  */ = {
+			isa = PBXGroup;
+			children = (
+				5815AA0A2611366400D28F3A /* DriversMapViewController.swift */,
+				5815AA0B2611366400D28F3A /* DriversMapViewController.xib */,
+			);
+			path = "Drivers Map View ";
 			sourceTree = "<group>";
 		};
 		587B7E2E260F7E5F00C154AC = {
@@ -197,8 +219,8 @@
 		587B7E7C260FC2F900C154AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				587B7E7D260FC31600C154AC /* DriversListViewController.swift */,
-				587B7E7E260FC31600C154AC /* DriversListViewController.xib */,
+				5815AA092611362C00D28F3A /* Drivers Map View  */,
+				5815AA052611361E00D28F3A /* Driver List View */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */,
+				5815AA0D2611366400D28F3A /* DriversMapViewController.xib in Resources */,
 				587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */,
 				587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */,
 			);
@@ -465,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */,
+				5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */,
 				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,
 				5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */,
 				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,

@@ -31,7 +31,14 @@ struct DriverConfigurator {
     }
     
     private static func asymbleDriversMapView() -> UIViewController {
+        
         let driversViewController = DriversMapViewController()
+        let repository = DriversRepository(apiClient: APICleint.shared)
+        let presnter = DriversMapPresenter(view: driversViewController)
+        let interactor = DriversMapInteractor(presenter: presnter,
+                                              repository: repository)
+        driversViewController.interactor = interactor
+        
         return driversViewController
     }
 }

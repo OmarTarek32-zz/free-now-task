@@ -36,7 +36,8 @@ struct DriverConfigurator {
         let repository = DriversRepository(apiClient: APICleint.shared)
         let presnter = DriversMapPresenter(view: driversViewController)
         let interactor = DriversMapInteractor(presenter: presnter,
-                                              repository: repository)
+                                              repository: repository,
+                                              locationManager: LocationManager())
         driversViewController.interactor = interactor
         
         return driversViewController

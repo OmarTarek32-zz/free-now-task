@@ -14,7 +14,7 @@ protocol DriversMapViewProtocol: DriversMapPresenterToViewProtocol {
 }
 
 protocol DriversMapViewToInteractorProtocol {
-    func viewLoaded()
+    func viewStarted(with mapFrame: MapFrameCoordinates)
 }
 
 // MARK: - Interactor Protocols
@@ -22,6 +22,7 @@ protocol DriversMapViewToInteractorProtocol {
 protocol DriversMapInteractorProtocol: DriversMapViewToInteractorProtocol {
     var presenter: DriversMapInteractorToPresenterProtocol { get }
     var repository: DriversInteractorToRepositoryProtocol { get }
+    var locationManager: DriversInteractorToLocationManagerProtocol { get }
 }
 
 protocol DriversMapInteractorToPresenterProtocol {
@@ -31,6 +32,8 @@ protocol DriversInteractorToRepositoryProtocol {
     func getDriversList(topLeftPointLat: Double, topLeftPointLong: Double, rightBottomPointLat: Double, rightBottomPointLong: Double, compeletion: @escaping (Result<Drivers, Error>) -> Void)
 }
 
+protocol DriversInteractorToLocationManagerProtocol {
+}
 
 // MARK: - Presenter Protocols
 

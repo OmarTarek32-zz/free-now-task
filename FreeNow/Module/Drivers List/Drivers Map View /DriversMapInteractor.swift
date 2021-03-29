@@ -6,21 +6,29 @@
 //
 
 import Foundation
+import CoreLocation
 
 class DriversMapInteractor {
     
     var presenter: DriversMapInteractorToPresenterProtocol
     var repository: DriversInteractorToRepositoryProtocol
+    var locationManager: DriversInteractorToLocationManagerProtocol
     
-    init(presenter: DriversMapInteractorToPresenterProtocol, repository: DriversInteractorToRepositoryProtocol) {
+    init(presenter: DriversMapInteractorToPresenterProtocol,
+         repository: DriversInteractorToRepositoryProtocol,
+         locationManager: DriversInteractorToLocationManagerProtocol) {
+        
         self.presenter = presenter
         self.repository = repository
+        self.locationManager = locationManager
     }
     
 }
 
 extension DriversMapInteractor: DriversMapInteractorProtocol {
-    func viewLoaded() {
+    
+    func viewStarted(with mapFrame: MapFrameCoordinates) {
+
         repository.getDriversList(topLeftPointLat: 53.694865,
                                   topLeftPointLong: 9.757589,
                                   rightBottomPointLat: 53.394655,

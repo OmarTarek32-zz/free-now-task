@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol DriversRepositoryProtocol {
-
-    var apiClient: APICleintProtocol { get }
-    
-    func getDriversList(topLeftPointLat: Double, topLeftPointLong: Double, rightBottomPointLat: Double, rightBottomPointLong: Double, compeletion: @escaping (Result<Drivers, Error>) -> Void)
-}
-
 struct DriversRepository {
     
     var apiClient: APICleintProtocol

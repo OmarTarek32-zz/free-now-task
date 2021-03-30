@@ -25,3 +25,11 @@ struct Coordinate: Model {
     let latitude: Double
     let longitude: Double
 }
+
+struct MapFrameCoordinate {
+    
+    var topLeftPointLat: Double
+    var topleftPointLong: Double
+    var BottomRightPointLat: Double
+    var BottomRightPointLong: Double
+}

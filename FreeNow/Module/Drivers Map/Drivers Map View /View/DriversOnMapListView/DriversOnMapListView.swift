@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DriversOnMapListViewDelegate: AnyObject {
-    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didEndDisplayItemAt indexPath: IndexPath)
+    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didSelect driver: DriverViewModel, at indexPath: IndexPath)
 }
 
 class DriversOnMapListView: UIView, NibLoadable {
@@ -43,6 +43,9 @@ class DriversOnMapListView: UIView, NibLoadable {
     func addDrivers(_ drivers: [DriverViewModel]) {
         self.drivers = drivers
         collectionView.reloadData()
+        if !drivers.isEmpty {
+            collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+        }
     }
     
 }
@@ -64,7 +67,7 @@ extension DriversOnMapListView: UICollectionViewDataSource {
 
 extension DriversOnMapListView: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        delegate?.driversOnMapListView(self, didEndDisplayItemAt: indexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.driversOnMapListView(self, didSelect: drivers[indexPath.row], at: indexPath)
     }
 }

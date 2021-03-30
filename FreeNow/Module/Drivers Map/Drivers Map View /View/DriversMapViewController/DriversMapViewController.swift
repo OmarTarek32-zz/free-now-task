@@ -69,7 +69,10 @@ extension DriversMapViewController: DriversMapViewProtocol {
 
 extension DriversMapViewController: DriversOnMapListViewDelegate {
     
-    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didEndDisplayItemAt indexPath: IndexPath) {
-        mapView.selectAnnotation(mapView.annotations[indexPath.row], animated: false)
+    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didSelect driver: DriverViewModel, at indexPath: IndexPath) {
+        
+        let annotation = mapView.annotations.first {
+            $0.coordinate.latitude == driver.coordinate.latitude && $0.coordinate.longitude == driver.coordinate.longitude }
+        mapView.selectAnnotation(annotation!, animated: false)
     }
 }

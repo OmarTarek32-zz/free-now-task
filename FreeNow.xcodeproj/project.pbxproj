@@ -19,6 +19,15 @@
 		581820FE26121F4600D7B044 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581820FD26121F4600D7B044 /* LocationManager.swift */; };
 		581821032612831200D7B044 /* DriversMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581821022612831200D7B044 /* DriversMapView.swift */; };
 		5818210B2612A4AC00D7B044 /* UserHumbergLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5818210A2612A4AC00D7B044 /* UserHumbergLocation.gpx */; };
+		5818211926130D2300D7B044 /* DriversOnMapListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5818211826130D2300D7B044 /* DriversOnMapListView.xib */; };
+		5818211E26130D3400D7B044 /* DriversOnMapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818211D26130D3400D7B044 /* DriversOnMapListView.swift */; };
+		5818212D26130DF700D7B044 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818212B26130DF700D7B044 /* UICollectionViewExtension.swift */; };
+		5818212E26130DF700D7B044 /* ReusableUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818212C26130DF700D7B044 /* ReusableUIViewExtension.swift */; };
+		58182133261312DA00D7B044 /* DriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58182132261312DA00D7B044 /* DriverViewModel.swift */; };
+		5818213A2613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581821382613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift */; };
+		5818213B2613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581821392613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib */; };
+		5818214D26131B2700D7B044 /* DriverCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5818214C26131B2700D7B044 /* DriverCardView.xib */; };
+		5818215226131B4500D7B044 /* DriverCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818215126131B4500D7B044 /* DriverCardView.swift */; };
 		584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4226114DD50018DADD /* DriversMapInteractor.swift */; };
 		584A2F4826114DFD0018DADD /* DriversMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
@@ -67,6 +76,15 @@
 		581820FD26121F4600D7B044 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		581821022612831200D7B044 /* DriversMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapView.swift; sourceTree = "<group>"; };
 		5818210A2612A4AC00D7B044 /* UserHumbergLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UserHumbergLocation.gpx; sourceTree = "<group>"; };
+		5818211826130D2300D7B044 /* DriversOnMapListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversOnMapListView.xib; sourceTree = "<group>"; };
+		5818211D26130D3400D7B044 /* DriversOnMapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversOnMapListView.swift; sourceTree = "<group>"; };
+		5818212B26130DF700D7B044 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		5818212C26130DF700D7B044 /* ReusableUIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableUIViewExtension.swift; sourceTree = "<group>"; };
+		58182132261312DA00D7B044 /* DriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewModel.swift; sourceTree = "<group>"; };
+		581821382613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversOnMapListCollectionViewCell.swift; sourceTree = "<group>"; };
+		581821392613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversOnMapListCollectionViewCell.xib; sourceTree = "<group>"; };
+		5818214C26131B2700D7B044 /* DriverCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverCardView.xib; sourceTree = "<group>"; };
+		5818215126131B4500D7B044 /* DriverCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCardView.swift; sourceTree = "<group>"; };
 		584A2F4226114DD50018DADD /* DriversMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapInteractor.swift; sourceTree = "<group>"; };
 		584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapPresenter.swift; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,12 +165,58 @@
 			path = "Drivers Map View ";
 			sourceTree = "<group>";
 		};
-		584A2F3D26114D840018DADD /* View */ = {
+		5818212226130D4500D7B044 /* DriversOnMapListView */ = {
+			isa = PBXGroup;
+			children = (
+				5818211826130D2300D7B044 /* DriversOnMapListView.xib */,
+				5818211D26130D3400D7B044 /* DriversOnMapListView.swift */,
+			);
+			path = DriversOnMapListView;
+			sourceTree = "<group>";
+		};
+		5818212626130D4D00D7B044 /* DriversMapViewController */ = {
 			isa = PBXGroup;
 			children = (
 				5815AA0A2611366400D28F3A /* DriversMapViewController.swift */,
-				581821022612831200D7B044 /* DriversMapView.swift */,
 				5815AA0B2611366400D28F3A /* DriversMapViewController.xib */,
+			);
+			path = DriversMapViewController;
+			sourceTree = "<group>";
+		};
+		5818212A26130DBC00D7B044 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5818212C26130DF700D7B044 /* ReusableUIViewExtension.swift */,
+				5818212B26130DF700D7B044 /* UICollectionViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		581821372613144500D7B044 /* DriversOnMapListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				581821382613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift */,
+				581821392613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib */,
+			);
+			path = DriversOnMapListCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		58182148261319AE00D7B044 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5818214C26131B2700D7B044 /* DriverCardView.xib */,
+				5818215126131B4500D7B044 /* DriverCardView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		584A2F3D26114D840018DADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				581821022612831200D7B044 /* DriversMapView.swift */,
+				581821372613144500D7B044 /* DriversOnMapListCollectionViewCell */,
+				5818212626130D4D00D7B044 /* DriversMapViewController */,
+				5818212226130D4500D7B044 /* DriversOnMapListView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,25 +294,28 @@
 		587B7E7A260FC2D700C154AC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5818212A26130DBC00D7B044 /* Extension */,
 				5815A981260FCBB700D28F3A /* Network Client */,
-				587B7E7B260FC2E400C154AC /* Drivers List */,
+				58182148261319AE00D7B044 /* Shared */,
+				587B7E7B260FC2E400C154AC /* Drivers Map */,
+				5815AA052611361E00D28F3A /* Driver List View */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		587B7E7B260FC2E400C154AC /* Drivers List */ = {
+		587B7E7B260FC2E400C154AC /* Drivers Map */ = {
 			isa = PBXGroup;
 			children = (
 				5815AA092611362C00D28F3A /* Drivers Map View  */,
-				5815AA052611361E00D28F3A /* Driver List View */,
 				5815AA1426113B5400D28F3A /* DriversProtocols.swift */,
 				587B7E87260FC35C00C154AC /* DriversConfigurator.swift */,
 				5815A9C1260FF7CA00D28F3A /* DriversModel.swift */,
 				5815A9E1261115D800D28F3A /* DriversRepository.swift */,
 				5815A9E92611168D00D28F3A /* DriversRequest.swift */,
 				581820FD26121F4600D7B044 /* LocationManager.swift */,
+				58182132261312DA00D7B044 /* DriverViewModel.swift */,
 			);
-			path = "Drivers List";
+			path = "Drivers Map";
 			sourceTree = "<group>";
 		};
 		7E1A72E44637FFAA4BD28C82 /* Pods */ = {
@@ -382,8 +449,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5818211926130D2300D7B044 /* DriversOnMapListView.xib in Resources */,
 				587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */,
 				5818210B2612A4AC00D7B044 /* UserHumbergLocation.gpx in Resources */,
+				5818213B2613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib in Resources */,
+				5818214D26131B2700D7B044 /* DriverCardView.xib in Resources */,
 				5815AA0D2611366400D28F3A /* DriversMapViewController.xib in Resources */,
 				587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */,
 				587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */,
@@ -517,12 +587,18 @@
 				581821032612831200D7B044 /* DriversMapView.swift in Sources */,
 				587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */,
 				5815AA1526113B5400D28F3A /* DriversProtocols.swift in Sources */,
+				58182133261312DA00D7B044 /* DriverViewModel.swift in Sources */,
 				5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */,
 				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,
+				5818215226131B4500D7B044 /* DriverCardView.swift in Sources */,
 				5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */,
+				5818211E26130D3400D7B044 /* DriversOnMapListView.swift in Sources */,
+				5818213A2613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift in Sources */,
 				584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */,
+				5818212D26130DF700D7B044 /* UICollectionViewExtension.swift in Sources */,
 				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,
 				5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */,
+				5818212E26130DF700D7B044 /* ReusableUIViewExtension.swift in Sources */,
 				5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */,
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,
 				581820FE26121F4600D7B044 /* LocationManager.swift in Sources */,

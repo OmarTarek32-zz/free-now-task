@@ -29,6 +29,8 @@ class DriversMapInteractor {
     
 }
 
+// MARK: - Extensions
+
 extension DriversMapInteractor: DriversMapInteractorProtocol {
     
     func requestAccessLocationPermissionIfNeeded() {

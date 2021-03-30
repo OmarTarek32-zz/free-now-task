@@ -15,6 +15,8 @@ enum DriverConfiguratorTypes {
 
 struct DriverConfigurator {
     
+    // MARK: - Public Functions
+    
     static func asymble(type: DriverConfiguratorTypes) -> UIViewController {
         switch type {
         case .listView:
@@ -24,6 +26,8 @@ struct DriverConfigurator {
             return asymbleDriversMapView()
         }
     }
+    
+    // MARK: - Private Functions
     
     private static func asymbleDriversListView() -> UIViewController {
         let driversViewController = DriversListViewController()

@@ -10,11 +10,17 @@ import CoreLocation
 
 class DriversMapPresenter: DriversMapPresenterProtocol {
     
+    // MARK: - Dependencies
+    
     weak var view: DriversMapPresenterToViewProtocol?
+    
+    // MARK: - Initializers
     
     init(view: DriversMapPresenterToViewProtocol) {
         self.view = view
     }
+    
+    // MARK: - Functions
     
     func map(_ driver: Drivers.Driver) -> DriverViewModel {
         DriverViewModel(id: driver.id,
@@ -25,6 +31,8 @@ class DriversMapPresenter: DriversMapPresenterProtocol {
                         heading: driver.heading)
     }
 }
+
+// MARK: - Extensions
 
 extension DriversMapPresenter: DriversMapInteractorToPresenterProtocol {
     

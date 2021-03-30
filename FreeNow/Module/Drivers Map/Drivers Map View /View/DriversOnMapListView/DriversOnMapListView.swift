@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DriversOnMapListViewDelegate: AnyObject {
+    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didEndDisplayItemAt indexPath: IndexPath)
+}
+
 class DriversOnMapListView: UIView, NibLoadable {
     
     // MARK: - IBOutlets
@@ -16,10 +20,13 @@ class DriversOnMapListView: UIView, NibLoadable {
             collectionView.registerCell(withCellType: DriversOnMapListCollectionViewCell.self)
             collectionView.delegate = self
             collectionView.dataSource = self
+            collectionView.collectionViewLayout = CardPagingLayout()
         }
     }
     
     // MARK: - Properties
+    
+    weak var delegate: DriversOnMapListViewDelegate?
     
     private var drivers: [DriverViewModel] = []
   
@@ -55,19 +62,9 @@ extension DriversOnMapListView: UICollectionViewDataSource {
     }
 }
 
-extension DriversOnMapListView: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: frame.width - (frame.width * 0.1) , height: frame.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
-    }
-
-}
-
 extension DriversOnMapListView: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        delegate?.driversOnMapListView(self, didEndDisplayItemAt: indexPath)
+    }
 }

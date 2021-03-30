@@ -12,7 +12,11 @@ class DriversMapViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var driversListView: DriversOnMapListView!
+    @IBOutlet private weak var driversListView: DriversOnMapListView! {
+        didSet {
+            driversListView.delegate = self
+        }
+    }
     @IBOutlet private weak var mapView: DriversMapView! {
         didSet {
             mapView.delegate = self
@@ -60,5 +64,12 @@ extension DriversMapViewController: DriversMapViewProtocol {
     
     func removeAllDriversFromMap() {
         mapView.removeAnnotations(mapView.annotations)
+    }
+}
+
+extension DriversMapViewController: DriversOnMapListViewDelegate {
+    
+    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didEndDisplayItemAt indexPath: IndexPath) {
+        mapView.selectAnnotation(mapView.annotations[indexPath.row], animated: false)
     }
 }

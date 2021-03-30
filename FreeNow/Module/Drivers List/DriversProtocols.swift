@@ -14,7 +14,8 @@ protocol DriversMapViewProtocol: DriversMapPresenterToViewProtocol {
 }
 
 protocol DriversMapViewToInteractorProtocol {
-    func viewStarted(with mapFrame: MapFrameCoordinates)
+    func requestAccessLocationPermissionIfNeeded()
+    func fetchDrivers(in frame: MapFrameCoordinate)
 }
 
 // MARK: - Interactor Protocols
@@ -26,6 +27,8 @@ protocol DriversMapInteractorProtocol: DriversMapViewToInteractorProtocol {
 }
 
 protocol DriversMapInteractorToPresenterProtocol {
+    func didReceiveDrivers(_ drivers: [Drivers.Driver])
+    func didReceiveError(_ error: Error)
 }
 
 protocol DriversInteractorToRepositoryProtocol {
@@ -33,15 +36,18 @@ protocol DriversInteractorToRepositoryProtocol {
 }
 
 protocol DriversInteractorToLocationManagerProtocol {
+    func requestAccessLocationPermissionIfNeeded()
 }
 
 // MARK: - Presenter Protocols
 
 protocol DriversMapPresenterProtocol: DriversMapInteractorToPresenterProtocol {
-    var view: DriversMapPresenterToViewProtocol { get }
+    var view: DriversMapPresenterToViewProtocol? { get }
 }
 
-protocol DriversMapPresenterToViewProtocol {
+protocol DriversMapPresenterToViewProtocol: AnyObject {
+    func addDriversOnMap(_ drivers: [DriverViewModel])
+    func removeAllDriversFromMap()
 }
 
 // MARK: - Repository Protocols

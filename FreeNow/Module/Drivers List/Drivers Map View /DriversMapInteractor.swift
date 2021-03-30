@@ -10,9 +10,13 @@ import CoreLocation
 
 class DriversMapInteractor {
     
+    // MARK: - Dependencies
+    
     var presenter: DriversMapInteractorToPresenterProtocol
     var repository: DriversInteractorToRepositoryProtocol
     var locationManager: DriversInteractorToLocationManagerProtocol
+    
+    // MARK: - Initializers
     
     init(presenter: DriversMapInteractorToPresenterProtocol,
          repository: DriversInteractorToRepositoryProtocol,
@@ -27,16 +31,19 @@ class DriversMapInteractor {
 
 extension DriversMapInteractor: DriversMapInteractorProtocol {
     
-    func viewStarted(with mapFrame: MapFrameCoordinates) {
-
-        repository.getDriversList(topLeftPointLat: 53.694865,
-                                  topLeftPointLong: 9.757589,
-                                  rightBottomPointLat: 53.394655,
-                                  rightBottomPointLong: 10.099891) { result in
+    func requestAccessLocationPermissionIfNeeded() {
+        locationManager.requestAccessLocationPermissionIfNeeded()
+    }
+    
+    func fetchDrivers(in frame: MapFrameCoordinate) {
+        repository.getDriversList(topLeftPointLat: frame.topLeftPointLat,
+                                  topLeftPointLong: frame.topleftPointLong,
+                                  rightBottomPointLat: frame.BottomRightPointLat,
+                                  rightBottomPointLong: frame.BottomRightPointLong) { [weak self] result in
             
             switch result {
             case .success(let drivers):
-                debugPrint(drivers)
+                self?.presenter.didReceiveDrivers(drivers.poiList)
             case .failure(let error):
                 debugPrint(error)
             }

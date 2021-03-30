@@ -20,7 +20,11 @@ class LocationManager: NSObject {
 
 extension LocationManager: DriversInteractorToLocationManagerProtocol {
     
-    func requestAccessLocationPermission() {
+    func requestAccessLocationPermissionIfNeeded() {
+        guard locationManager.authorizationStatus == .denied ||
+                locationManager.authorizationStatus == .notDetermined ||
+                locationManager.authorizationStatus == .restricted else { return }
+        
         locationManager.requestWhenInUseAuthorization()
     }
     

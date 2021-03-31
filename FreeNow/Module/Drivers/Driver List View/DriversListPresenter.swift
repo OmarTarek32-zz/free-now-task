@@ -37,6 +37,14 @@ class DriversListPresenter {
 
 extension DriversListPresenter: DriversListPresenterProtocol {
     
+    func showLoading() {
+        view?.showLoading()
+    }
+    
+    func hideLoading() {
+        view?.hideLoading()
+    }
+    
     func didReceiveDrivers(_ drivers: [Drivers.Driver]) {
         view?.showDriversList(drivers.map(map(_:)))
     }

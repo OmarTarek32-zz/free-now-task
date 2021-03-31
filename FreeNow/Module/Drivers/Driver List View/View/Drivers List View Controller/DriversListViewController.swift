@@ -33,7 +33,6 @@ class DriversListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         // This delay is for giving the chance to the transaiton to be done be for loading data
         // it just kind of producing a beatuy UI nothing more, we can remove the delay and everything will work fine also
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -46,8 +45,8 @@ class DriversListViewController: UIViewController {
     func animateVisableCell() {
         
         tableView.visibleCells.forEach { $0.alpha = 0 }
-        for (index, cell) in tableView.visibleCells.enumerated() {
-            cell.transform = CGAffineTransform(translationX: 0, y: tableView.frame.height * 0.5)
+        for (index, cell) in self.tableView.visibleCells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 0, y: self.tableView.frame.height * 0.5)
             UIView.animate(withDuration: 0.75,
                            delay: 0.1 * Double((index+1)),
                            usingSpringWithDamping: 0.8,
@@ -59,6 +58,7 @@ class DriversListViewController: UIViewController {
                            },
                            completion: nil)
         }
+        
     }
     
     // MARK: - Actions
@@ -71,6 +71,12 @@ class DriversListViewController: UIViewController {
 
 // MARK: - Extensions
 
+extension DriversListViewController: ErrorDisplaying {
+    func retry() {
+        self.interactor?.fetchAllDriversInHambureg()
+    }
+}
+
 extension DriversListViewController: DriversListViewProtocol {
 
     func showDriversList(_ drivers: [DriverViewModel]) {
@@ -79,8 +85,8 @@ extension DriversListViewController: DriversListViewProtocol {
         animateVisableCell()
     }
     
-    func showErrorView(title: String, subTitle: String) {
-        
+    func showError(title: String, subTitle: String) {
+        showErrorView(title: title, subtitle: subTitle)
     }
 }
 

@@ -43,6 +43,7 @@
 		587797CD2614E0BB00607007 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797CC2614E0BB00607007 /* LoadingViewCapable.swift */; };
 		587797D32614E0C900607007 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797D12614E0C900607007 /* ErrorView.swift */; };
 		587797D42614E0C900607007 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587797D22614E0C900607007 /* ErrorView.xib */; };
+		587797F02615185500607007 /* ErrorDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797EF2615185500607007 /* ErrorDisplaying.swift */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
 		587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E43260F7E6000C154AC /* Assets.xcassets */; };
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
@@ -113,6 +114,7 @@
 		587797CC2614E0BB00607007 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
 		587797D12614E0C900607007 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		587797D22614E0C900607007 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		587797EF2615185500607007 /* ErrorDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplaying.swift; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		587797DC2614E0DE00607007 /* Error View */ = {
 			isa = PBXGroup;
 			children = (
+				587797EF2615185500607007 /* ErrorDisplaying.swift */,
 				587797D12614E0C900607007 /* ErrorView.swift */,
 				587797D22614E0C900607007 /* ErrorView.xib */,
 			);
@@ -699,6 +702,7 @@
 				5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */,
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,
 				587797CD2614E0BB00607007 /* LoadingViewCapable.swift in Sources */,
+				587797F02615185500607007 /* ErrorDisplaying.swift in Sources */,
 				581820FE26121F4600D7B044 /* LocationManager.swift in Sources */,
 				587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */,
 				585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */,

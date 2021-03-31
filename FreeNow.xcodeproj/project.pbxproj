@@ -40,6 +40,11 @@
 		586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD91726146C0000FD0477 /* UITableViewExtension.swift */; };
 		586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */; };
 		586BD92426146E5C00FD0477 /* DriversListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586BD92226146E5C00FD0477 /* DriversListTableViewCell.xib */; };
+		587797CD2614E0BB00607007 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797CC2614E0BB00607007 /* LoadingViewCapable.swift */; };
+		587797D32614E0C900607007 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797D12614E0C900607007 /* ErrorView.swift */; };
+		587797D42614E0C900607007 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587797D22614E0C900607007 /* ErrorView.xib */; };
+		587797F02615185500607007 /* ErrorDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797EF2615185500607007 /* ErrorDisplaying.swift */; };
+		587797F526151CB600607007 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587797F426151CB600607007 /* NetworkError.swift */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
 		587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E43260F7E6000C154AC /* Assets.xcassets */; };
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
@@ -107,6 +112,11 @@
 		586BD91726146C0000FD0477 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListTableViewCell.swift; sourceTree = "<group>"; };
 		586BD92226146E5C00FD0477 /* DriversListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversListTableViewCell.xib; sourceTree = "<group>"; };
+		587797CC2614E0BB00607007 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
+		587797D12614E0C900607007 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		587797D22614E0C900607007 /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		587797EF2615185500607007 /* ErrorDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplaying.swift; sourceTree = "<group>"; };
+		587797F426151CB600607007 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 				5815A982260FCDF300D28F3A /* APICleintProtocols.swift */,
 				5815A9AA260FD2A900D28F3A /* APICleint.swift */,
 				5815A9AF260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift */,
+				587797F426151CB600607007 /* NetworkError.swift */,
 			);
 			path = "Network Client";
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 				584A2F3D26114D840018DADD /* View */,
 				584A2F4226114DD50018DADD /* DriversMapInteractor.swift */,
 				584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */,
+				5859981A2614CDD1003538BE /* DriversRouter.swift */,
 			);
 			path = "Drivers Map View ";
 			sourceTree = "<group>";
@@ -282,6 +294,33 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		587797CB2614E08A00607007 /* Common Reusable View */ = {
+			isa = PBXGroup;
+			children = (
+				587797D82614E0CF00607007 /* Loading View */,
+				587797DC2614E0DE00607007 /* Error View */,
+			);
+			path = "Common Reusable View";
+			sourceTree = "<group>";
+		};
+		587797D82614E0CF00607007 /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				587797CC2614E0BB00607007 /* LoadingViewCapable.swift */,
+			);
+			path = "Loading View";
+			sourceTree = "<group>";
+		};
+		587797DC2614E0DE00607007 /* Error View */ = {
+			isa = PBXGroup;
+			children = (
+				587797EF2615185500607007 /* ErrorDisplaying.swift */,
+				587797D12614E0C900607007 /* ErrorView.swift */,
+				587797D22614E0C900607007 /* ErrorView.xib */,
+			);
+			path = "Error View";
+			sourceTree = "<group>";
+		};
 		587B7E2E260F7E5F00C154AC = {
 			isa = PBXGroup;
 			children = (
@@ -346,20 +385,21 @@
 		587B7E7A260FC2D700C154AC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				587797CB2614E08A00607007 /* Common Reusable View */,
 				586BD92B26146F6800FD0477 /* Animation */,
 				5818212A26130DBC00D7B044 /* Extension */,
 				5815A981260FCBB700D28F3A /* Network Client */,
-				58182148261319AE00D7B044 /* Shared */,
-				587B7E7B260FC2E400C154AC /* Drivers Map */,
-				5815AA052611361E00D28F3A /* Driver List View */,
+				587B7E7B260FC2E400C154AC /* Drivers */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		587B7E7B260FC2E400C154AC /* Drivers Map */ = {
+		587B7E7B260FC2E400C154AC /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
+				58182148261319AE00D7B044 /* Shared */,
 				5815AA092611362C00D28F3A /* Drivers Map View  */,
+				5815AA052611361E00D28F3A /* Driver List View */,
 				5815AA1426113B5400D28F3A /* DriversProtocols.swift */,
 				587B7E87260FC35C00C154AC /* DriversConfigurator.swift */,
 				5815A9C1260FF7CA00D28F3A /* DriversModel.swift */,
@@ -367,9 +407,8 @@
 				5815A9E92611168D00D28F3A /* DriversRequest.swift */,
 				581820FD26121F4600D7B044 /* LocationManager.swift */,
 				58182132261312DA00D7B044 /* DriverViewModel.swift */,
-				5859981A2614CDD1003538BE /* DriversRouter.swift */,
 			);
-			path = "Drivers Map";
+			path = Drivers;
 			sourceTree = "<group>";
 		};
 		7E1A72E44637FFAA4BD28C82 /* Pods */ = {
@@ -512,6 +551,7 @@
 				587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */,
 				587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */,
 				586BD92426146E5C00FD0477 /* DriversListTableViewCell.xib in Resources */,
+				587797D42614E0C900607007 /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +694,9 @@
 				5818211E26130D3400D7B044 /* DriversOnMapListView.swift in Sources */,
 				5818213A2613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift in Sources */,
 				584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */,
+				587797D32614E0C900607007 /* ErrorView.swift in Sources */,
 				586BD9132613FCA200FD0477 /* CircularAnimationController.swift in Sources */,
+				587797F526151CB600607007 /* NetworkError.swift in Sources */,
 				5818212D26130DF700D7B044 /* UICollectionViewExtension.swift in Sources */,
 				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,
 				5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */,
@@ -663,6 +705,8 @@
 				581821572613354000D7B044 /* CardPagingLayout.swift in Sources */,
 				5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */,
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,
+				587797CD2614E0BB00607007 /* LoadingViewCapable.swift in Sources */,
+				587797F02615185500607007 /* ErrorDisplaying.swift in Sources */,
 				581820FE26121F4600D7B044 /* LocationManager.swift in Sources */,
 				587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */,
 				585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */,

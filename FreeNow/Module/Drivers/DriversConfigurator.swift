@@ -12,7 +12,6 @@ enum DriverConfiguratorTypes {
     case listView
     case mapView
 }
-
 struct DriverConfigurator {
     
     // MARK: - Public Functions

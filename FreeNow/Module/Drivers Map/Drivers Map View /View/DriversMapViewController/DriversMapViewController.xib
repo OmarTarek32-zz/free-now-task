@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriversMapViewController" customModule="FreeNow" customModuleProvider="target">
             <connections>
+                <outlet property="driversListView" destination="amW-es-4J0" id="HZG-Ai-Get"/>
                 <outlet property="mapView" destination="gVJ-JK-YAW" id="1QQ-fM-qwk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,14 +23,22 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-JK-YAW" customClass="DriversMapView" customModule="FreeNow" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amW-es-4J0" customClass="DriversOnMapListView" customModule="FreeNow" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="672" width="414" height="224"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="gVJ-JK-YAW" secondAttribute="bottom" id="94m-Gj-WZ4"/>
+                <constraint firstItem="amW-es-4J0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KGW-RO-Wym"/>
                 <constraint firstItem="gVJ-JK-YAW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LXI-Dx-4An"/>
                 <constraint firstItem="gVJ-JK-YAW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yeh-9H-1Rn"/>
+                <constraint firstAttribute="bottom" secondItem="amW-es-4J0" secondAttribute="bottom" id="fNg-u0-1ZR"/>
                 <constraint firstItem="gVJ-JK-YAW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="faL-As-p5r"/>
+                <constraint firstItem="amW-es-4J0" firstAttribute="height" secondItem="gVJ-JK-YAW" secondAttribute="height" multiplier="0.25" id="sf1-1D-XNV"/>
+                <constraint firstAttribute="trailing" secondItem="amW-es-4J0" secondAttribute="trailing" id="zVe-DW-tRi"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>

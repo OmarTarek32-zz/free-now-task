@@ -10,6 +10,8 @@ import MapKit
 
 class DriversMapView: MKMapView {
     
+    // MARK: - Properties
+    
      var currentMapFrameCoordinates: MapFrameCoordinate {
         let topLeftCoordinatePoint = convert(CGPoint(x: 0, y: 0), toCoordinateFrom: self)
         let bottomRightCoordinatePoint = convert(CGPoint(x: bounds.width, y: bounds.height), toCoordinateFrom: self)
@@ -18,6 +20,8 @@ class DriversMapView: MKMapView {
                                    BottomRightPointLat: bottomRightCoordinatePoint.latitude,
                                    BottomRightPointLong: bottomRightCoordinatePoint.longitude)
     }
+    
+    // MARK: - Public Functions
     
     func displayArea(in frame: MapFrameCoordinate) {
         
@@ -32,6 +36,8 @@ class DriversMapView: MKMapView {
             return annotation
         })
     }
+    
+    // MARK: - Private Functions
     
     private func mapRect(from frame: MapFrameCoordinate) -> MKMapRect {
         let coordinate1 = CLLocationCoordinate2D(latitude: frame.topLeftPointLat,

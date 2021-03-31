@@ -10,13 +10,16 @@ import CoreLocation
 
 class LocationManager: NSObject {
     
+    // MARK: - Properties
+    
     lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
-        locationManager.delegate = self
         return locationManager
     }()
     
 }
+
+// MARK: - Extensions
 
 extension LocationManager: DriversInteractorToLocationManagerProtocol {
     
@@ -28,17 +31,4 @@ extension LocationManager: DriversInteractorToLocationManagerProtocol {
         locationManager.requestWhenInUseAuthorization()
     }
     
-}
-
-extension LocationManager: CLLocationManagerDelegate {
-    
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        if manager.authorizationStatus == .authorizedAlways {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    // do stuff
-                }
-            }
-        }
-    }
 }

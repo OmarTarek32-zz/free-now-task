@@ -9,10 +9,16 @@ import Foundation
 
 struct DriversRepository {
     
+    // MARK: - Dependencies
+    
     var apiClient: APICleintProtocol
 }
 
+// MARK: - Extensions
+
 extension DriversRepository: DriversRepositoryProtocol {
+    
+    // MARK: - Functions
     
     func getDriversList(topLeftPointLat: Double,
                         topLeftPointLong: Double,

@@ -8,17 +8,15 @@
 import UIKit
 import MapKit
 
-struct DriverViewModel {
-    let id: Int
-    let coordinate: CLLocationCoordinate2D
-    let state: String
-    let type: String
-    let heading: Double
-}
-
 class DriversMapViewController: UIViewController {
+    
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var driversListView: DriversOnMapListView! {
+        didSet {
+            driversListView.delegate = self
+        }
+    }
     @IBOutlet private weak var mapView: DriversMapView! {
         didSet {
             mapView.delegate = self
@@ -48,6 +46,8 @@ class DriversMapViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension DriversMapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -59,9 +59,20 @@ extension DriversMapViewController: DriversMapViewProtocol {
     
     func addDriversOnMap(_ drivers: [DriverViewModel]) {
         mapView.addDrivers(drivers)
+        driversListView.addDrivers(drivers)
     }
     
     func removeAllDriversFromMap() {
         mapView.removeAnnotations(mapView.annotations)
+    }
+}
+
+extension DriversMapViewController: DriversOnMapListViewDelegate {
+    
+    func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didSelect driver: DriverViewModel, at indexPath: IndexPath) {
+        
+        let annotation = mapView.annotations.first {
+            $0.coordinate.latitude == driver.coordinate.latitude && $0.coordinate.longitude == driver.coordinate.longitude }
+        mapView.selectAnnotation(annotation!, animated: false)
     }
 }

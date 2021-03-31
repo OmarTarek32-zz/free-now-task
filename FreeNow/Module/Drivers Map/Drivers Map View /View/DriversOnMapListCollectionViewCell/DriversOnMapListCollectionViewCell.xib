@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQe-Ls-LZv" customClass="DriverCardView" customModule="FreeNow" customModuleProvider="target">
-                        <rect key="frame" x="10" y="16" width="356" height="145"/>
+                        <rect key="frame" x="10" y="8" width="356" height="161"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                 </subviews>
@@ -27,8 +27,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="MQe-Ls-LZv" secondAttribute="trailing" constant="10" id="6WL-R1-gRJ"/>
-                <constraint firstItem="MQe-Ls-LZv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="KUW-fD-NqY"/>
-                <constraint firstAttribute="bottom" secondItem="MQe-Ls-LZv" secondAttribute="bottom" constant="16" id="np9-j8-R8N"/>
+                <constraint firstItem="MQe-Ls-LZv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="KUW-fD-NqY"/>
+                <constraint firstAttribute="bottom" secondItem="MQe-Ls-LZv" secondAttribute="bottom" constant="8" id="np9-j8-R8N"/>
                 <constraint firstItem="MQe-Ls-LZv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="r6r-ck-bDf"/>
             </constraints>
             <size key="customSize" width="376" height="177"/>

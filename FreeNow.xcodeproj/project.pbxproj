@@ -31,6 +31,13 @@
 		581821572613354000D7B044 /* CardPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581821562613354000D7B044 /* CardPagingLayout.swift */; };
 		584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4226114DD50018DADD /* DriversMapInteractor.swift */; };
 		584A2F4826114DFD0018DADD /* DriversMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */; };
+		585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585997F626147EB0003538BE /* DriverListViewProtocols.swift */; };
+		5859980B261481B3003538BE /* DriversListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859980A261481B3003538BE /* DriversListInteractor.swift */; };
+		5859981026148724003538BE /* DriversListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859980F26148724003538BE /* DriversListPresenter.swift */; };
+		586BD9132613FCA200FD0477 /* CircularAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD9122613FCA200FD0477 /* CircularAnimationController.swift */; };
+		586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD91726146C0000FD0477 /* UITableViewExtension.swift */; };
+		586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */; };
+		586BD92426146E5C00FD0477 /* DriversListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586BD92226146E5C00FD0477 /* DriversListTableViewCell.xib */; };
 		587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B7E3A260F7E5F00C154AC /* AppDelegate.swift */; };
 		587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E43260F7E6000C154AC /* Assets.xcassets */; };
 		587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B7E45260F7E6000C154AC /* LaunchScreen.storyboard */; };
@@ -89,6 +96,13 @@
 		581821562613354000D7B044 /* CardPagingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagingLayout.swift; sourceTree = "<group>"; };
 		584A2F4226114DD50018DADD /* DriversMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapInteractor.swift; sourceTree = "<group>"; };
 		584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapPresenter.swift; sourceTree = "<group>"; };
+		585997F626147EB0003538BE /* DriverListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewProtocols.swift; sourceTree = "<group>"; };
+		5859980A261481B3003538BE /* DriversListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListInteractor.swift; sourceTree = "<group>"; };
+		5859980F26148724003538BE /* DriversListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresenter.swift; sourceTree = "<group>"; };
+		586BD9122613FCA200FD0477 /* CircularAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularAnimationController.swift; sourceTree = "<group>"; };
+		586BD91726146C0000FD0477 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListTableViewCell.swift; sourceTree = "<group>"; };
+		586BD92226146E5C00FD0477 /* DriversListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriversListTableViewCell.xib; sourceTree = "<group>"; };
 		587B7E37260F7E5F00C154AC /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587B7E3A260F7E5F00C154AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B7E43260F7E6000C154AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				584A2F3E26114D9D0018DADD /* View */,
+				585997F626147EB0003538BE /* DriverListViewProtocols.swift */,
+				5859980A261481B3003538BE /* DriversListInteractor.swift */,
+				5859980F26148724003538BE /* DriversListPresenter.swift */,
 			);
 			path = "Driver List View";
 			sourceTree = "<group>";
@@ -172,7 +189,6 @@
 			children = (
 				5818211826130D2300D7B044 /* DriversOnMapListView.xib */,
 				5818211D26130D3400D7B044 /* DriversOnMapListView.swift */,
-				581821562613354000D7B044 /* CardPagingLayout.swift */,
 			);
 			path = DriversOnMapListView;
 			sourceTree = "<group>";
@@ -191,6 +207,7 @@
 			children = (
 				5818212C26130DF700D7B044 /* ReusableUIViewExtension.swift */,
 				5818212B26130DF700D7B044 /* UICollectionViewExtension.swift */,
+				586BD91726146C0000FD0477 /* UITableViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,10 +244,37 @@
 		584A2F3E26114D9D0018DADD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				586BD92026146DF600FD0477 /* Drivers List View Cell */,
+				586BD91C26146DE600FD0477 /* Drivers List View Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		586BD91C26146DE600FD0477 /* Drivers List View Controller */ = {
+			isa = PBXGroup;
+			children = (
 				587B7E7D260FC31600C154AC /* DriversListViewController.swift */,
 				587B7E7E260FC31600C154AC /* DriversListViewController.xib */,
 			);
-			path = View;
+			path = "Drivers List View Controller";
+			sourceTree = "<group>";
+		};
+		586BD92026146DF600FD0477 /* Drivers List View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */,
+				586BD92226146E5C00FD0477 /* DriversListTableViewCell.xib */,
+			);
+			path = "Drivers List View Cell";
+			sourceTree = "<group>";
+		};
+		586BD92B26146F6800FD0477 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				581821562613354000D7B044 /* CardPagingLayout.swift */,
+				586BD9122613FCA200FD0477 /* CircularAnimationController.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		587B7E2E260F7E5F00C154AC = {
@@ -297,6 +341,7 @@
 		587B7E7A260FC2D700C154AC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				586BD92B26146F6800FD0477 /* Animation */,
 				5818212A26130DBC00D7B044 /* Extension */,
 				5815A981260FCBB700D28F3A /* Network Client */,
 				58182148261319AE00D7B044 /* Shared */,
@@ -460,6 +505,7 @@
 				5815AA0D2611366400D28F3A /* DriversMapViewController.xib in Resources */,
 				587B7E44260F7E6000C154AC /* Assets.xcassets in Resources */,
 				587B7E80260FC31600C154AC /* DriversListViewController.xib in Resources */,
+				586BD92426146E5C00FD0477 /* DriversListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,9 +633,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5859981026148724003538BE /* DriversListPresenter.swift in Sources */,
 				581821032612831200D7B044 /* DriversMapView.swift in Sources */,
 				587B7E7F260FC31600C154AC /* DriversListViewController.swift in Sources */,
 				5815AA1526113B5400D28F3A /* DriversProtocols.swift in Sources */,
+				586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */,
+				586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */,
 				58182133261312DA00D7B044 /* DriverViewModel.swift in Sources */,
 				5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */,
 				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,
@@ -598,6 +647,7 @@
 				5818211E26130D3400D7B044 /* DriversOnMapListView.swift in Sources */,
 				5818213A2613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift in Sources */,
 				584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */,
+				586BD9132613FCA200FD0477 /* CircularAnimationController.swift in Sources */,
 				5818212D26130DF700D7B044 /* UICollectionViewExtension.swift in Sources */,
 				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,
 				5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */,
@@ -607,7 +657,9 @@
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,
 				581820FE26121F4600D7B044 /* LocationManager.swift in Sources */,
 				587B7E3B260F7E5F00C154AC /* AppDelegate.swift in Sources */,
+				585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */,
 				584A2F4826114DFD0018DADD /* DriversMapPresenter.swift in Sources */,
+				5859980B261481B3003538BE /* DriversListInteractor.swift in Sources */,
 				5815A983260FCDF300D28F3A /* APICleintProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,22 +1,22 @@
 //
-//  DriversMapPresenter.swift
+//  DriversListPresenter.swift
 //  FreeNow
 //
-//  Created by Omar Tarek on 3/29/21.
+//  Created by Omar Tarek on 3/31/21.
 //
 
 import Foundation
 import CoreLocation
 
-class DriversMapPresenter: DriversMapPresenterProtocol {
-    
+class DriversListPresenter {
+
     // MARK: - Dependencies
     
-    weak var view: DriversMapPresenterToViewProtocol?
+    weak var view: DriversListPresenterToViewProtocol?
     
     // MARK: - Initializers
     
-    init(view: DriversMapPresenterToViewProtocol) {
+    init(view: DriversListPresenterToViewProtocol) {
         self.view = view
     }
     
@@ -30,15 +30,15 @@ class DriversMapPresenter: DriversMapPresenterProtocol {
                         type: driver.type,
                         heading: driver.heading)
     }
+    
 }
 
 // MARK: - Extensions
 
-extension DriversMapPresenter: DriversMapInteractorToPresenterProtocol {
+extension DriversListPresenter: DriversListPresenterProtocol {
     
     func didReceiveDrivers(_ drivers: [Drivers.Driver]) {
-        view?.removeAllDriversFromMap()
-        view?.addDriversOnMap(drivers.map(map(_:)))
+        view?.showDriversList(drivers.map(map(_:)))
     }
     
     func didReceiveError(_ error: Error) {

@@ -41,6 +41,26 @@ class DriversListViewController: UIViewController {
         }
     }
     
+    // MARK: - Functions
+    
+    func animateVisableCell() {
+        
+        tableView.visibleCells.forEach { $0.alpha = 0 }
+        for (index, cell) in tableView.visibleCells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableView.frame.height * 0.5)
+            UIView.animate(withDuration: 0.75,
+                           delay: 0.1 * Double((index+1)),
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0.2,
+                           options: UIView.AnimationOptions.curveEaseOut,
+                           animations: {
+                            cell.transform = CGAffineTransform.identity
+                            cell.alpha = 1
+                           },
+                           completion: nil)
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func closeButtonAction(_ sender: UIButton) {
@@ -52,9 +72,11 @@ class DriversListViewController: UIViewController {
 // MARK: - Extensions
 
 extension DriversListViewController: DriversListViewProtocol {
+
     func showDriversList(_ drivers: [DriverViewModel]) {
         self.drivers = drivers
         tableView.reloadData()
+        animateVisableCell()
     }
     
     func showErrorView(title: String, subTitle: String) {

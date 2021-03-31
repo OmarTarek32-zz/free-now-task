@@ -15,6 +15,7 @@ class DriversOnMapListView: UIView, NibLoadable {
     
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var emptyDataMessageLabel: UILabel!
     @IBOutlet private weak var topHeaderTitleView: UIView!
     @IBOutlet private weak var showHideLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView! {
@@ -42,6 +43,7 @@ class DriversOnMapListView: UIView, NibLoadable {
         super.awakeFromNib()
         
         loadNibContent()
+        emptyDataMessageLabel.isHidden = true
     }
     
     // MARK: - Public Functions
@@ -50,7 +52,10 @@ class DriversOnMapListView: UIView, NibLoadable {
         self.drivers = drivers
         collectionView.reloadData()
         if !drivers.isEmpty {
+            emptyDataMessageLabel.isHidden = true
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+        } else {
+            emptyDataMessageLabel.isHidden = false
         }
     }
     

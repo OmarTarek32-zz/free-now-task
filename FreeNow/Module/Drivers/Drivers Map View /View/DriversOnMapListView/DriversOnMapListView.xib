@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriversOnMapListView" customModule="FreeNow" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="1cn-j7-5ym" id="KKi-6X-oT3"/>
+                <outlet property="emptyDataMessageLabel" destination="1oH-ub-zzP" id="l04-Lw-fkC"/>
                 <outlet property="showHideLabel" destination="phH-Fp-TPr" id="MEI-OD-Qoy"/>
                 <outlet property="topHeaderTitleView" destination="uKy-hm-cwl" id="O1W-bh-F4X"/>
             </connections>
@@ -57,15 +58,23 @@
                         <constraint firstAttribute="bottom" secondItem="phH-Fp-TPr" secondAttribute="bottom" id="qCC-Zi-1Zr"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We can no find drivers in the selected area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oH-ub-zzP">
+                    <rect key="frame" x="101.5" y="102.5" width="323" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="uKy-hm-cwl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="637-jy-Kel"/>
+                <constraint firstItem="1oH-ub-zzP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7kI-9J-hJO"/>
                 <constraint firstItem="1cn-j7-5ym" firstAttribute="top" secondItem="uKy-hm-cwl" secondAttribute="bottom" id="BaH-dL-TRQ"/>
                 <constraint firstItem="1cn-j7-5ym" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TOO-70-68q"/>
                 <constraint firstAttribute="bottom" secondItem="1cn-j7-5ym" secondAttribute="bottom" id="YkM-0F-pMr"/>
                 <constraint firstItem="1cn-j7-5ym" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aV8-Rv-dfV"/>
+                <constraint firstItem="1oH-ub-zzP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bhs-DD-Lto"/>
                 <constraint firstAttribute="trailing" secondItem="uKy-hm-cwl" secondAttribute="trailing" id="doc-0N-sYK"/>
                 <constraint firstItem="uKy-hm-cwl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vKH-uf-bZ0"/>
             </constraints>

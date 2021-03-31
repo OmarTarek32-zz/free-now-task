@@ -75,6 +75,10 @@ extension DriversListViewController: ErrorDisplaying {
     func retry() {
         self.interactor?.fetchAllDriversInHambureg()
     }
+    
+    var retryViewEdgeInsets: UIEdgeInsets? {
+        return UIEdgeInsets(top: view.frame.height - tableView.frame.height, left: 0, bottom: 0, right: 0)
+    }
 }
 
 extension DriversListViewController: DriversListViewProtocol {

@@ -16,11 +16,16 @@ protocol Retriable {
 
 protocol ErrorDisplaying: Retriable {
     
+    var retryViewEdgeInsets: UIEdgeInsets? { get }
     func showErrorView(title: String, subtitle: String)
     func hideErrorView()
 }
 
 extension ErrorDisplaying where Self: UIViewController {
+    
+    var retryViewEdgeInsets: UIEdgeInsets? {
+        return UIEdgeInsets.zero
+    }
     
     func showErrorView(title: String, subtitle: String) {
         let errorView = ErrorView.instanceFromNib()
@@ -33,10 +38,14 @@ extension ErrorDisplaying where Self: UIViewController {
         }
         view.addSubview(errorView)
         errorView.translatesAutoresizingMaskIntoConstraints = false
-        errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        errorView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                           constant: retryViewEdgeInsets?.left ?? 0).isActive = true
+        errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                            constant: retryViewEdgeInsets?.right ?? 0).isActive = true
+        errorView.topAnchor.constraint(equalTo: view.topAnchor,
+                                       constant: retryViewEdgeInsets?.top ?? 0).isActive = true
+        errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                          constant: retryViewEdgeInsets?.bottom ?? 0).isActive = true
     }
   
     

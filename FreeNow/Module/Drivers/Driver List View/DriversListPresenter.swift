@@ -46,10 +46,15 @@ extension DriversListPresenter: DriversListPresenterProtocol {
     }
     
     func didReceiveDrivers(_ drivers: [Drivers.Driver]) {
-        view?.showDriversList(drivers.map(map(_:)))
+        
+        if drivers.isEmpty {
+            view?.showError(title: "", subTitle: "We did not find any drivers in Hamburg")
+        } else {
+            view?.showDriversList(drivers.map(map(_:)))
+        }
     }
     
     func didReceiveError(_ error: Error) {
-        
+        view?.showError(title: "We have encountered a problem", subTitle: error.localizedDescription)
     }
 }

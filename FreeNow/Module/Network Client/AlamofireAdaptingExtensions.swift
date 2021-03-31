@@ -8,12 +8,6 @@
 import Foundation
 import Alamofire
 
-enum AlamofireCustomError: Error {
-    case canNotMapRequest
-    case canNotDecodeObject
-    case unknowen
-}
-
 struct AlamofireRequestMapper: URLRequestConvertible {
     
     var request: RequestProtocol

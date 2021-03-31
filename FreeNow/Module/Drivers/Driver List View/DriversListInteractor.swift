@@ -42,7 +42,7 @@ extension DriversListInteractor: DriversListInteractorProtocol {
             case .success(let drivers):
                 self?.presenter.didReceiveDrivers(drivers.poiList)
             case .failure(let error):
-                debugPrint(error)
+                self?.presenter.didReceiveError(error)
             }
             self?.presenter.hideLoading()
         }

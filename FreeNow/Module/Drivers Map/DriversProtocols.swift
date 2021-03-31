@@ -6,16 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - View Protocols
 
 protocol DriversMapViewProtocol: DriversMapPresenterToViewProtocol {
     var interactor: DriversMapViewToInteractorProtocol? { get }
+    var router: DriversMapViewToRouterProtocol? { get }
 }
 
 protocol DriversMapViewToInteractorProtocol {
     func requestAccessLocationPermissionIfNeeded()
     func fetchDrivers(in frame: MapFrameCoordinate)
+}
+
+protocol DriversMapViewToRouterProtocol {
+    func navigateToDriversList()
 }
 
 // MARK: - Interactor Protocols
@@ -55,3 +61,10 @@ protocol DriversMapPresenterToViewProtocol: AnyObject {
 protocol DriversRepositoryProtocol: DriversInteractorToRepositoryProtocol {
     var apiClient: APICleintProtocol { get }
 }
+
+// MARK: - Router Protocols
+
+protocol DriversRouterProtocol: DriversMapViewToRouterProtocol {
+    var sourceViewController: (UIViewController & Navigatable & UIViewControllerTransitioningDelegate)? { get }
+}
+

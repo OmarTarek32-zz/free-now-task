@@ -34,6 +34,8 @@
 		585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585997F626147EB0003538BE /* DriverListViewProtocols.swift */; };
 		5859980B261481B3003538BE /* DriversListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859980A261481B3003538BE /* DriversListInteractor.swift */; };
 		5859981026148724003538BE /* DriversListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859980F26148724003538BE /* DriversListPresenter.swift */; };
+		5859981B2614CDD1003538BE /* DriversRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859981A2614CDD1003538BE /* DriversRouter.swift */; };
+		585998202614CDF2003538BE /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859981F2614CDF2003538BE /* Navigatable.swift */; };
 		586BD9132613FCA200FD0477 /* CircularAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD9122613FCA200FD0477 /* CircularAnimationController.swift */; };
 		586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD91726146C0000FD0477 /* UITableViewExtension.swift */; };
 		586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */; };
@@ -99,6 +101,8 @@
 		585997F626147EB0003538BE /* DriverListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewProtocols.swift; sourceTree = "<group>"; };
 		5859980A261481B3003538BE /* DriversListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListInteractor.swift; sourceTree = "<group>"; };
 		5859980F26148724003538BE /* DriversListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresenter.swift; sourceTree = "<group>"; };
+		5859981A2614CDD1003538BE /* DriversRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRouter.swift; sourceTree = "<group>"; };
+		5859981F2614CDF2003538BE /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
 		586BD9122613FCA200FD0477 /* CircularAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularAnimationController.swift; sourceTree = "<group>"; };
 		586BD91726146C0000FD0477 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		586BD92126146E5C00FD0477 /* DriversListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				5818212C26130DF700D7B044 /* ReusableUIViewExtension.swift */,
 				5818212B26130DF700D7B044 /* UICollectionViewExtension.swift */,
 				586BD91726146C0000FD0477 /* UITableViewExtension.swift */,
+				5859981F2614CDF2003538BE /* Navigatable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				5815A9E92611168D00D28F3A /* DriversRequest.swift */,
 				581820FD26121F4600D7B044 /* LocationManager.swift */,
 				58182132261312DA00D7B044 /* DriverViewModel.swift */,
+				5859981A2614CDD1003538BE /* DriversRouter.swift */,
 			);
 			path = "Drivers Map";
 			sourceTree = "<group>";
@@ -640,6 +646,7 @@
 				586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */,
 				586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */,
 				58182133261312DA00D7B044 /* DriverViewModel.swift in Sources */,
+				5859981B2614CDD1003538BE /* DriversRouter.swift in Sources */,
 				5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */,
 				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,
 				5818215226131B4500D7B044 /* DriverCardView.swift in Sources */,
@@ -652,6 +659,7 @@
 				5815A9C2260FF7CA00D28F3A /* DriversModel.swift in Sources */,
 				5815A9AB260FD2A900D28F3A /* APICleint.swift in Sources */,
 				5818212E26130DF700D7B044 /* ReusableUIViewExtension.swift in Sources */,
+				585998202614CDF2003538BE /* Navigatable.swift in Sources */,
 				581821572613354000D7B044 /* CardPagingLayout.swift in Sources */,
 				5815A9B0260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift in Sources */,
 				587B7E88260FC35C00C154AC /* DriversConfigurator.swift in Sources */,

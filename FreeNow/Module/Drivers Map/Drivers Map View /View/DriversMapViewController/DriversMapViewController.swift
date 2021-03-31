@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class DriversMapViewController: UIViewController {
+class DriversMapViewController: UIViewController, Navigatable {
     
     // MARK: - IBOutlets
     
@@ -30,6 +30,7 @@ class DriversMapViewController: UIViewController {
     // MARK: - Dependencies
     
     var interactor: DriversMapViewToInteractorProtocol?
+    var router: DriversMapViewToRouterProtocol?
     
     // MARK: - Private Properties
     
@@ -79,10 +80,7 @@ class DriversMapViewController: UIViewController {
     }
     
     @IBAction private func allDriversAction(_ sender: UIButton) {
-        let listViewController = DriverConfigurator.asymble(type: .listView)
-        listViewController.transitioningDelegate = self
-        listViewController.modalPresentationStyle = .custom
-        present(listViewController, animated: true, completion: nil)
+        router?.navigateToDriversList()
     }
     
 }
@@ -97,7 +95,7 @@ extension DriversMapViewController: MKMapViewDelegate {
 }
 
 extension DriversMapViewController: DriversMapViewProtocol {
-    
+   
     func addDriversOnMap(_ drivers: [DriverViewModel]) {
         mapView.addDrivers(drivers)
         driversListView.addDrivers(drivers)

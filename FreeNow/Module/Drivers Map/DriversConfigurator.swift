@@ -42,14 +42,16 @@ struct DriverConfigurator {
     
     private static func asymbleDriversMapView() -> UIViewController {
         
-        let driversViewController = DriversMapViewController()
-        let repository = DriversRepository(apiClient: APICleint.shared)
-        let presnter = DriversMapPresenter(view: driversViewController)
-        let interactor = DriversMapInteractor(presenter: presnter,
-                                              repository: repository,
+        let driversMapViewController = DriversMapViewController()
+        let driversRepository = DriversRepository(apiClient: APICleint.shared)
+        let driversMappresnter = DriversMapPresenter(view: driversMapViewController)
+        let driversMapRouter = DriversRouter()
+        let driversMapinteractor = DriversMapInteractor(presenter: driversMappresnter,
+                                              repository: driversRepository,
                                               locationManager: LocationManager())
-        driversViewController.interactor = interactor
-        
-        return driversViewController
+        driversMapRouter.sourceViewController = driversMapViewController
+        driversMapViewController.interactor = driversMapinteractor
+        driversMapViewController.router = driversMapRouter
+        return driversMapViewController
     }
 }

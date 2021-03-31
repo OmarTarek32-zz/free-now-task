@@ -12,6 +12,8 @@ class DriversMapViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var allDriversButton: UIButton!
+    @IBOutlet private weak var driversListViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var driversListView: DriversOnMapListView! {
         didSet {
             driversListView.delegate = self
@@ -21,6 +23,7 @@ class DriversMapViewController: UIViewController {
         didSet {
             mapView.delegate = self
             mapView.showsUserLocation = true
+            mapView.showsCompass = false
         }
     }
     
@@ -28,8 +31,12 @@ class DriversMapViewController: UIViewController {
     
     var interactor: DriversMapViewToInteractorProtocol?
     
-    // MARK: - Properties
+    // MARK: - Private Properties
     
+    private var circularAnimationController = CircularAnimationController()
+    private var isBottomSheetOpen = false
+    private var bottomSheetMaxBottomMargin: CGFloat = 0
+    private var bottomSheetMinBottomMargin: CGFloat = -175
     private let hamburgMapFrame = MapFrameCoordinate(topLeftPointLat: 53.694865,
                                                      topleftPointLong: 9.757589,
                                                      BottomRightPointLat: 53.394655,
@@ -43,7 +50,41 @@ class DriversMapViewController: UIViewController {
         interactor?.requestAccessLocationPermissionIfNeeded()
         interactor?.fetchDrivers(in: hamburgMapFrame)
         mapView.displayArea(in: hamburgMapFrame)
+        driversListView.didTapOnToggleView = {
+            self.toggleListVisabilty()
+        }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.driversListViewBottomConstraint.constant = bottomSheetMinBottomMargin
+    }
+    
+    // MARK: - Functions
+    
+    func toggleListVisabilty() {
+        
+        UIView.animate(withDuration: 0.7,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0.2,
+                       options: UIView.AnimationOptions.curveEaseInOut,
+                       animations: {
+                        self.driversListViewBottomConstraint.constant = self.isBottomSheetOpen ? self.bottomSheetMinBottomMargin : self.bottomSheetMaxBottomMargin
+                        self.view.layoutIfNeeded()
+                       }, completion: { _ in
+                        self.isBottomSheetOpen.toggle()
+                       })
+    }
+    
+    @IBAction private func allDriversAction(_ sender: UIButton) {
+        let listViewController = DriverConfigurator.asymble(type: .listView)
+        listViewController.transitioningDelegate = self
+        listViewController.modalPresentationStyle = .custom
+        present(listViewController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - Extensions
@@ -74,5 +115,22 @@ extension DriversMapViewController: DriversOnMapListViewDelegate {
         let annotation = mapView.annotations.first {
             $0.coordinate.latitude == driver.coordinate.latitude && $0.coordinate.longitude == driver.coordinate.longitude }
         mapView.selectAnnotation(annotation!, animated: false)
+    }
+}
+
+extension DriversMapViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        circularAnimationController.transitionMode = .present
+        circularAnimationController.startingPoint = allDriversButton.center
+        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        return circularAnimationController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        circularAnimationController.transitionMode = .dismiss
+        circularAnimationController.startingPoint = allDriversButton.center
+        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        return circularAnimationController
     }
 }

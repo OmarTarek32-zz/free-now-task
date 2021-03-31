@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 class CardPagingLayout: UICollectionViewLayout {
-    // MARK: Book keeping
+    
+    // MARK: Properties
+    
     private var itemCount = 0
     private var itemSize = CGSize.zero
     private var contentInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
@@ -33,6 +35,7 @@ class CardPagingLayout: UICollectionViewLayout {
         guard let cv = collectionView else { return .zero }
         return CGSize(width: contentWidth, height: cv.bounds.height)
     }
+    
     // MARK: - Prepare
     
     override func prepare() {
@@ -65,6 +68,7 @@ class CardPagingLayout: UICollectionViewLayout {
             currentX += itemAndSpaceWidth
         }
     }
+    
     // MARK: - Layout Attributes
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -94,6 +98,7 @@ class CardPagingLayout: UICollectionViewLayout {
         let adjustedX = (targetItem * itemAndSpaceWidth) - contentInsets.left
         return CGPoint(x: adjustedX, y: proposedContentOffset.y)
     }
+    
     // MARK: - Layout invalidations
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
@@ -105,6 +110,7 @@ class CardPagingLayout: UICollectionViewLayout {
         }
         super.invalidateLayout(with: context)
     }
+    
     // MARK: - Transform Calculator
     
     private func getTransform3D(for attributes: UICollectionViewLayoutAttributes) -> CATransform3D {

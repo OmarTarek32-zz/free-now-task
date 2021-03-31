@@ -15,6 +15,8 @@ class DriversOnMapListView: UIView, NibLoadable {
     
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var topHeaderTitleView: UIView!
+    @IBOutlet private weak var showHideLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
             collectionView.registerCell(withCellType: DriversOnMapListCollectionViewCell.self)
@@ -24,10 +26,14 @@ class DriversOnMapListView: UIView, NibLoadable {
         }
     }
     
-    // MARK: - Properties
+    // MARK: - Public Properties
     
     weak var delegate: DriversOnMapListViewDelegate?
+    var didTapOnToggleView: (() -> Void)?
     
+    // MARK: - Private Properties
+    
+    private var isShowen = false
     private var drivers: [DriverViewModel] = []
   
     // MARK: - Life Cycle Functions
@@ -46,6 +52,12 @@ class DriversOnMapListView: UIView, NibLoadable {
         if !drivers.isEmpty {
             collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
         }
+    }
+    
+    @IBAction private func toggoleViewVisabiltyAction(_ sender: UIButton) {
+        didTapOnToggleView?()
+        showHideLabel.text = isShowen ? "Show" : "Hide"
+        isShowen.toggle()
     }
     
 }

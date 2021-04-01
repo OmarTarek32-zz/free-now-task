@@ -33,6 +33,7 @@
 		5824B16C2616662E000C924B /* DriversListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B16B2616662E000C924B /* DriversListViewSpy.swift */; };
 		5824B171261670A8000C924B /* DriversListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B170261670A8000C924B /* DriversListPresenterSpy.swift */; };
 		5824B17C261679E1000C924B /* DriversListPresnterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B17B261679E1000C924B /* DriversListPresnterTests.swift */; };
+		5824B18726168691000C924B /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B18626168691000C924B /* NetworkConstants.swift */; };
 		584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4226114DD50018DADD /* DriversMapInteractor.swift */; };
 		584A2F4826114DFD0018DADD /* DriversMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */; };
 		585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585997F626147EB0003538BE /* DriverListViewProtocols.swift */; };
@@ -116,6 +117,7 @@
 		5824B16B2616662E000C924B /* DriversListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListViewSpy.swift; sourceTree = "<group>"; };
 		5824B170261670A8000C924B /* DriversListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresenterSpy.swift; sourceTree = "<group>"; };
 		5824B17B261679E1000C924B /* DriversListPresnterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresnterTests.swift; sourceTree = "<group>"; };
+		5824B18626168691000C924B /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		584A2F4226114DD50018DADD /* DriversMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapInteractor.swift; sourceTree = "<group>"; };
 		584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapPresenter.swift; sourceTree = "<group>"; };
 		585997F626147EB0003538BE /* DriverListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewProtocols.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5815A9AA260FD2A900D28F3A /* APICleint.swift */,
 				5815A9AF260FD3FA00D28F3A /* AlamofireAdaptingExtensions.swift */,
 				587797F426151CB600607007 /* CustomNetworkError.swift */,
+				5824B18626168691000C924B /* NetworkConstants.swift */,
 			);
 			path = "Network Client";
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				586BD91826146C0000FD0477 /* UITableViewExtension.swift in Sources */,
 				586BD92326146E5C00FD0477 /* DriversListTableViewCell.swift in Sources */,
 				58182133261312DA00D7B044 /* DriverViewModel.swift in Sources */,
+				5824B18726168691000C924B /* NetworkConstants.swift in Sources */,
 				5859981B2614CDD1003538BE /* DriversRouter.swift in Sources */,
 				5815AA0C2611366400D28F3A /* DriversMapViewController.swift in Sources */,
 				5815A9E2261115D800D28F3A /* DriversRepository.swift in Sources */,

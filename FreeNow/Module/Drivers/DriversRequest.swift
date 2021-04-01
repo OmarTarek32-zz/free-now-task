@@ -11,10 +11,10 @@ enum DriversRequest: RequestProtocol {
     
     case list(leftTopPointLat: Double, leftTopPointLong: Double, rightBottomPointLat: Double, rightBottomPointLong: Double)
     
-    var url: String {
+    var endPoint: String {
         switch self{
         case .list:
-            return "https://poi-api.ytaxi.com/PoiService/poi/v1"
+            return "PoiService/poi/v1"
         }
     }
     

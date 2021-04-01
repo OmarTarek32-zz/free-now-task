@@ -29,7 +29,7 @@ struct AlamofireRequestMapper: URLRequestConvertible {
 
             return urlRequest
         }
-        throw AlamofireCustomError.canNotMapRequest
+        throw CustomNetworkError.canNotMapRequest
     }
 }
 
@@ -43,7 +43,7 @@ extension Session {
 
 extension DataRequest {
     @discardableResult
-    func responseObject<ResponsType: Model>(compeletion: @escaping (Result<ResponsType, Error>) -> Void) -> Self {
+    func responseObject<ResponsType: Model>(compeletion: @escaping (Result<ResponsType, CustomNetworkError>) -> Void) -> Self {
         
         responseString { response in
             
@@ -54,14 +54,14 @@ extension DataRequest {
                 guard let jsonData = jsonString.data(using: .utf8),
                       let drivers = try? JSONDecoder().decode(ResponsType.self, from: jsonData)
                 else {
-                    compeletion(Result.failure(AlamofireCustomError.canNotDecodeObject))
+                    compeletion(Result.failure(CustomNetworkError.canNotDecodeObject))
                     return
                 }
                 compeletion(Result.success(drivers))
                 
             case .failure(let error):
                 
-                compeletion(Result.failure(error))
+                compeletion(Result.failure(CustomNetworkError(error: error)))
                 
             }
         }

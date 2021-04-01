@@ -88,10 +88,6 @@ extension DriversListViewController: DriversListViewProtocol {
         tableView.reloadData()
         animateVisableCell()
     }
-    
-    func showError(title: String, subTitle: String) {
-        showErrorView(title: title, subtitle: subTitle)
-    }
 }
 
 extension DriversListViewController: UITableViewDataSource {

@@ -26,7 +26,7 @@ protocol DriversListInteractorProtocol: DriversListViewToInteractorProtocol {
 
 protocol DriversListInteractorToPresenterProtocol {
     func didReceiveDrivers(_ drivers: [Drivers.Driver])
-    func didReceiveError(_ error: Error)
+    func didReceiveError(_ error: CustomNetworkError)
     func showLoading()
     func hideLoading()
 }
@@ -37,7 +37,6 @@ protocol DriversListPresenterProtocol: DriversListInteractorToPresenterProtocol 
     var view: DriversListPresenterToViewProtocol? { get }
 }
 
-protocol DriversListPresenterToViewProtocol: AnyObject, LoadingViewCapable {
+protocol DriversListPresenterToViewProtocol: AnyObject, LoadingViewCapable, ErrorDisplaying {
     func showDriversList(_ drivers: [DriverViewModel])
-    func showError(title: String, subTitle: String)
 }

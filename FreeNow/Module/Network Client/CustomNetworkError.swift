@@ -7,19 +7,28 @@
 
 import Foundation
 
-enum AlamofireCustomError: Error, LocalizedError {
+enum CustomNetworkError: Error, LocalizedError {
+    
+    init(error: Error) {
+        self = .unknowen(error.asAFError?.localizedDescription)
+    }
+    
     case canNotMapRequest
     case canNotDecodeObject
-    case unknowen
+    case unknowen(String?)
+    case generic
     
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .canNotMapRequest:
             return "Can not Send Request"
         case .canNotDecodeObject:
             return "Can not read data"
-        case .unknowen:
+        case .generic:
             return "Something went wrong"
+        case .unknowen(let message):
+            return message ?? "Something went wrong"
+            
         }
     }
 

@@ -24,7 +24,7 @@ extension DriversRepository: DriversRepositoryProtocol {
                         topLeftPointLong: Double,
                         rightBottomPointLat: Double,
                         rightBottomPointLong: Double,
-                        compeletion: @escaping (Result<Drivers, Error>) -> Void) {
+                        compeletion: @escaping (Result<Drivers, CustomNetworkError>) -> Void) {
         
         let request = DriversRequest.list(leftTopPointLat: topLeftPointLat,
                                           leftTopPointLong: topLeftPointLong,

@@ -14,7 +14,7 @@ enum DriversRequest: RequestProtocol {
     var url: String {
         switch self{
         case .list:
-            return "https://poi-api.mytaxi.com/PoiService/poi/v1"
+            return "https://poi-api.ytaxi.com/PoiService/poi/v1"
         }
     }
     

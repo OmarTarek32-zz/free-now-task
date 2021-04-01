@@ -38,6 +38,7 @@ class DriversMapInteractorTests: XCTestCase {
         repository = nil
         presenter = nil
         locationManager = nil
+        apiClientSpy = nil
         sut = nil
     }
     

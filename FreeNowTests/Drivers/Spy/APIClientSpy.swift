@@ -14,7 +14,7 @@ class APIClientSpy: APICleintProtocol {
     
     var isRequestSent = false
     
-    // MARK: - Mock Functions
+    // MARK: - Spy Functions
     
     func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, CustomNetworkError>) -> Void) where ResponsType : Model {
         

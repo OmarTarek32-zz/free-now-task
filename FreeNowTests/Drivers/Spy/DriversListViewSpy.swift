@@ -1,5 +1,5 @@
 //
-//  DriversMapViewSpy.swift
+//  DriversListViewSpy.swift
 //  FreeNowTests
 //
 //  Created by Omar Tarek on 4/1/21.
@@ -10,39 +10,41 @@ import UIKit
 
 @testable import FreeNow
 
-class DriversMapViewSpy: DriversMapViewProtocol {
+class DriversListViewSpy: DriversListViewProtocol {
     
     // MARK: - Dependencies
     
-    var interactor: DriversMapViewToInteractorProtocol?
-    var router: DriversMapViewToRouterProtocol?
+    var interactor: DriversListViewToInteractorProtocol?
     
     // MARK: - Testing Properties
     
     var drivers: [DriverViewModel]?
-    var isRemovedAllDriversFromMap = false
     var error: (title: String, subtitle: String)?
     var isShowingErrorView = false
-    
-    var retryViewEdgeInsets: UIEdgeInsets?
+    var isShowingLoading = false
     
     // MARK: - Spy Functions
     
-    func addDriversOnMap(_ drivers: [DriverViewModel]) {
+    func showDriversList(_ drivers: [DriverViewModel]) {
         self.drivers = drivers
     }
     
-    func removeAllDriversFromMap() {
-        isRemovedAllDriversFromMap = true
+    func showLoading() {
+        isShowingLoading = true
     }
     
+    func hideLoading() {
+        isShowingLoading = false
+    }
+    
+    var retryViewEdgeInsets: UIEdgeInsets?
+    
     func showErrorView(title: String, subtitle: String) {
-        error = (title, subtitle)
+        error = (title: title, subtitle: subtitle)
         isShowingErrorView = true
     }
     
     func hideErrorView() {
         isShowingErrorView = false
     }
-    
 }

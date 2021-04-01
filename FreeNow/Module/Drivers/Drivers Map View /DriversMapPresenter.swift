@@ -41,7 +41,7 @@ extension DriversMapPresenter: DriversMapInteractorToPresenterProtocol {
         view?.addDriversOnMap(drivers.map(map(_:)))
     }
     
-    func didReceiveError(_ error: Error) {
-        
+    func didReceiveError(_ error: CustomNetworkError) {
+        view?.showErrorView(title: "We have encountered a problem", subtitle: error.localizedDescription)
     }
 }

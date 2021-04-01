@@ -34,15 +34,15 @@ protocol DriversMapInteractorProtocol: DriversMapViewToInteractorProtocol {
 
 protocol DriversMapInteractorToPresenterProtocol {
     func didReceiveDrivers(_ drivers: [Drivers.Driver])
-    func didReceiveError(_ error: Error)
+    func didReceiveError(_ error: CustomNetworkError)
 }
 
 protocol DriversInteractorToRepositoryProtocol {
-    func getDriversList(topLeftPointLat: Double, topLeftPointLong: Double, rightBottomPointLat: Double, rightBottomPointLong: Double, compeletion: @escaping (Result<Drivers, Error>) -> Void)
+    func getDriversList(topLeftPointLat: Double, topLeftPointLong: Double, rightBottomPointLat: Double, rightBottomPointLong: Double, compeletion: @escaping (Result<Drivers, CustomNetworkError>) -> Void)
 }
 
 protocol DriversInteractorToLocationManagerProtocol {
-    func requestAccessLocationPermissionIfNeeded()
+     func requestAccessLocationPermissionIfNeeded()
 }
 
 // MARK: - Presenter Protocols
@@ -51,7 +51,7 @@ protocol DriversMapPresenterProtocol: DriversMapInteractorToPresenterProtocol {
     var view: DriversMapPresenterToViewProtocol? { get }
 }
 
-protocol DriversMapPresenterToViewProtocol: AnyObject {
+protocol DriversMapPresenterToViewProtocol: AnyObject, ErrorDisplaying {
     func addDriversOnMap(_ drivers: [DriverViewModel])
     func removeAllDriversFromMap()
 }

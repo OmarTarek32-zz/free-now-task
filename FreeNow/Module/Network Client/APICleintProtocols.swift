@@ -29,8 +29,8 @@ protocol RequestProtocol {
     var parameters: Parameters? { get }
 }
 
-protocol Model: Codable {}
+public protocol Model: Codable {}
 
 protocol APICleintProtocol {
-    func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, Error>) -> Void) where ResponsType: Model
+    func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, CustomNetworkError>) -> Void) where ResponsType: Model
 }

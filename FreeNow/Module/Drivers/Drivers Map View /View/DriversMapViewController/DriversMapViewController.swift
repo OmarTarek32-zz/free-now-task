@@ -51,14 +51,12 @@ class DriversMapViewController: UIViewController, Navigatable {
         interactor?.requestAccessLocationPermissionIfNeeded()
         interactor?.fetchDrivers(in: hamburgMapFrame)
         mapView.displayArea(in: hamburgMapFrame)
-        driversListView.didTapOnToggleView = {
-            self.toggleListVisabilty()
-        }
+        driversListView.didTapOnToggleView = { [weak self] in self?.toggleListVisabilty() }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        mapView.isRotateEnabled = false
         self.driversListViewBottomConstraint.constant = bottomSheetMinBottomMargin
     }
     
@@ -86,6 +84,14 @@ class DriversMapViewController: UIViewController, Navigatable {
 }
 
 // MARK: - Extensions
+
+extension DriversMapViewController: ErrorDisplaying {
+    func showErrorView(title: String, subtitle: String) {
+        let alert = UIAlertController(title: title, message: subtitle, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
 
 extension DriversMapViewController: MKMapViewDelegate {
     

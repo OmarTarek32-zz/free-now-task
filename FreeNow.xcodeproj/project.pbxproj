@@ -261,6 +261,40 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		5824B15C2616622B000C924B /* Drivers List Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Drivers List Tests";
+			sourceTree = "<group>";
+		};
+		5824B15D26166246000C924B /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				5877980726152B6900607007 /* DriversMapPresenterSpy.swift */,
+				5877981A2615309700607007 /* APIClientSpy.swift */,
+				587798292615397600607007 /* LocationManagerSpy.swift */,
+				58779844261559E900607007 /* DriversMapViewSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		5824B15E26166270000C924B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5877980F26152C4D00607007 /* DriversRepositoryMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		5824B15F2616627D000C924B /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				58779821261533D200607007 /* DriversStubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		584A2F3D26114D840018DADD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,27 +369,25 @@
 			path = "Error View";
 			sourceTree = "<group>";
 		};
-		587798312615551700607007 /* Drivers Map */ = {
+		587798312615551700607007 /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
-				5877983B261557A500607007 /* Tests */,
-				5877980726152B6900607007 /* DriversMapPresenterSpy.swift */,
-				5877980F26152C4D00607007 /* DriversRepositoryMock.swift */,
-				5877981A2615309700607007 /* APIClientSpy.swift */,
-				58779821261533D200607007 /* DriversStubs.swift */,
-				587798292615397600607007 /* LocationManagerSpy.swift */,
-				58779844261559E900607007 /* DriversMapViewSpy.swift */,
+				5824B15F2616627D000C924B /* Stubs */,
+				5824B15E26166270000C924B /* Mock */,
+				5824B15D26166246000C924B /* Spy */,
+				5824B15C2616622B000C924B /* Drivers List Tests */,
+				5877983B261557A500607007 /* Drivers Map Tests */,
 			);
-			path = "Drivers Map";
+			path = Drivers;
 			sourceTree = "<group>";
 		};
-		5877983B261557A500607007 /* Tests */ = {
+		5877983B261557A500607007 /* Drivers Map Tests */ = {
 			isa = PBXGroup;
 			children = (
 				587B7E51260F7E6000C154AC /* DriversMapInteractorTests.swift */,
 				5877983F261557C300607007 /* DriversMapPresenterTests.swift */,
 			);
-			path = Tests;
+			path = "Drivers Map Tests";
 			sourceTree = "<group>";
 		};
 		587B7E2E260F7E5F00C154AC = {
@@ -393,7 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				587B7E53260F7E6000C154AC /* Info.plist */,
-				587798312615551700607007 /* Drivers Map */,
+				587798312615551700607007 /* Drivers */,
 			);
 			path = FreeNowTests;
 			sourceTree = "<group>";

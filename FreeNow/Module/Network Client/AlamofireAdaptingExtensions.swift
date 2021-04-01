@@ -17,7 +17,7 @@ struct AlamofireRequestMapper: URLRequestConvertible {
     }
     
     func asURLRequest() throws -> URLRequest {
-        if let url = URL(string: request.url) {
+        if let url = URL(string: request.baseURL+request.endPoint) {
             var urlRequest = URLRequest(url: url)
             let method = request.method
             urlRequest.httpMethod = method.rawValue

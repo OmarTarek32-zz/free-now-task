@@ -23,7 +23,8 @@ typealias Parameters = [String: Any]
 typealias HTTPHeaders = [String: String]
 
 protocol RequestProtocol {
-    var url: String { get }
+    var baseURL: String { get }
+    var endPoint: String { get }
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }

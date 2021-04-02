@@ -49,3 +49,7 @@ class DriversMapView: MKMapView {
         return MKMapRect(x: fmin(p1.x,p2.x), y: fmin(p1.y,p2.y), width: fabs(p1.x-p2.x), height: fabs(p1.y-p2.y))
     }
 }
+
+class CustomPointAnnotation: MKPointAnnotation {
+    var imageName: String!
+}

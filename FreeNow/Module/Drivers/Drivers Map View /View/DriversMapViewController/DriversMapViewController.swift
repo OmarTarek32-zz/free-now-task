@@ -98,6 +98,31 @@ extension DriversMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         interactor?.fetchDrivers(in: self.mapView.currentMapFrameCoordinates)
     }
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        if !(annotation is CarAnnoationView) {
+//            return nil
+//        }
+        
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: CarAnnoationView.reuseIdentifier)
+//
+//        if annotationView == nil {
+//            annotationView = CarAnnoationView(annotation: annotation, reuseIdentifier: CarAnnoationView.reuseIdentifier)
+//            annotationView?.canShowCallout = true
+//        } else {
+//            annotationView?.annotation = annotation
+//        }
+//
+//        annotationView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+//        annotationView?.annotation = annotation
+//        annotationView?.image = UIImage(named: "car")
+        
+        let annotationView = CarAnnotationView.instanceFromNib()
+        
+        return annotationView
+    }
+    
 }
 
 extension DriversMapViewController: DriversMapViewProtocol {
@@ -127,14 +152,14 @@ extension DriversMapViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         circularAnimationController.transitionMode = .present
         circularAnimationController.startingPoint = allDriversButton.center
-        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        circularAnimationController.circleColor = allDriversButton.backgroundColor ?? .white
         return circularAnimationController
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         circularAnimationController.transitionMode = .dismiss
         circularAnimationController.startingPoint = allDriversButton.center
-        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        circularAnimationController.circleColor = allDriversButton.backgroundColor ?? .white
         return circularAnimationController
     }
 }

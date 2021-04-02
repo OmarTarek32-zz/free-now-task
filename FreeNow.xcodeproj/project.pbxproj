@@ -34,6 +34,8 @@
 		5824B171261670A8000C924B /* DriversListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B170261670A8000C924B /* DriversListPresenterSpy.swift */; };
 		5824B17C261679E1000C924B /* DriversListPresnterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B17B261679E1000C924B /* DriversListPresnterTests.swift */; };
 		5824B18726168691000C924B /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B18626168691000C924B /* NetworkConstants.swift */; };
+		5824B19626169CF8000C924B /* CarAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5824B19526169CF8000C924B /* CarAnnotationView.xib */; };
+		5824B19B26169D0E000C924B /* CarAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5824B19A26169D0E000C924B /* CarAnnotationView.swift */; };
 		584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4226114DD50018DADD /* DriversMapInteractor.swift */; };
 		584A2F4826114DFD0018DADD /* DriversMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */; };
 		585997F726147EB0003538BE /* DriverListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585997F626147EB0003538BE /* DriverListViewProtocols.swift */; };
@@ -118,6 +120,8 @@
 		5824B170261670A8000C924B /* DriversListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresenterSpy.swift; sourceTree = "<group>"; };
 		5824B17B261679E1000C924B /* DriversListPresnterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversListPresnterTests.swift; sourceTree = "<group>"; };
 		5824B18626168691000C924B /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		5824B19526169CF8000C924B /* CarAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarAnnotationView.xib; sourceTree = "<group>"; };
+		5824B19A26169D0E000C924B /* CarAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotationView.swift; sourceTree = "<group>"; };
 		584A2F4226114DD50018DADD /* DriversMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapInteractor.swift; sourceTree = "<group>"; };
 		584A2F4726114DFD0018DADD /* DriversMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversMapPresenter.swift; sourceTree = "<group>"; };
 		585997F626147EB0003538BE /* DriverListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewProtocols.swift; sourceTree = "<group>"; };
@@ -310,13 +314,23 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
-		584A2F3D26114D840018DADD /* View */ = {
+		5824B19126168ADA000C924B /* Drivers Map View */ = {
 			isa = PBXGroup;
 			children = (
 				581821022612831200D7B044 /* DriversMapView.swift */,
+			);
+			path = "Drivers Map View";
+			sourceTree = "<group>";
+		};
+		584A2F3D26114D840018DADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5824B19126168ADA000C924B /* Drivers Map View */,
 				581821372613144500D7B044 /* DriversOnMapListCollectionViewCell */,
 				5818212626130D4D00D7B044 /* DriversMapViewController */,
 				5818212226130D4500D7B044 /* DriversOnMapListView */,
+				5824B19526169CF8000C924B /* CarAnnotationView.xib */,
+				5824B19A26169D0E000C924B /* CarAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,6 +642,7 @@
 			files = (
 				5818211926130D2300D7B044 /* DriversOnMapListView.xib in Resources */,
 				587B7E47260F7E6000C154AC /* LaunchScreen.storyboard in Resources */,
+				5824B19626169CF8000C924B /* CarAnnotationView.xib in Resources */,
 				5818210B2612A4AC00D7B044 /* UserHumbergLocation.gpx in Resources */,
 				5818213B2613151B00D7B044 /* DriversOnMapListCollectionViewCell.xib in Resources */,
 				5818214D26131B2700D7B044 /* DriverCardView.xib in Resources */,
@@ -777,6 +792,7 @@
 				5818215226131B4500D7B044 /* DriverCardView.swift in Sources */,
 				5815A9EA2611168D00D28F3A /* DriversRequest.swift in Sources */,
 				5818211E26130D3400D7B044 /* DriversOnMapListView.swift in Sources */,
+				5824B19B26169D0E000C924B /* CarAnnotationView.swift in Sources */,
 				5818213A2613151B00D7B044 /* DriversOnMapListCollectionViewCell.swift in Sources */,
 				584A2F4326114DD50018DADD /* DriversMapInteractor.swift in Sources */,
 				587797D32614E0C900607007 /* ErrorView.swift in Sources */,

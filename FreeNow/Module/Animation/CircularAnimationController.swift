@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-
 import UIKit
 
 class CircularAnimationController: NSObject {
@@ -56,23 +54,24 @@ extension CircularAnimationController:UIViewControllerAnimatedTransitioning {
                 circle.backgroundColor = circleColor
                 circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                 containerView.addSubview(circle)
-                presentedView.center = startingPoint
+                presentedView.frame = containerView.frame
                 presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                 presentedView.alpha = 0
                 containerView.addSubview(presentedView)
-                
-                UIView.animate(withDuration: duration, animations: {
-                    self.circle.transform = CGAffineTransform.identity
-                    presentedView.transform = CGAffineTransform.identity
-                    presentedView.alpha = 1
-                    presentedView.center = viewCenter
+                UIView.animateKeyframes(withDuration: duration, delay: 0, options: [.calculationModeCubic]) {
+                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
+                        self.circle.transform = CGAffineTransform.identity
+                        presentedView.transform = CGAffineTransform.identity
+                    }
                     
-                }, completion: { (success:Bool) in
+                    UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 1) {
+                        presentedView.alpha = 1
+                    }
+                } completion: { success in
                     transitionContext.completeTransition(success)
-                })
+                }
             }
-            
-        }else{
+        } else {
            
             if let returningView = transitionContext.view(forKey: .from) {
                 let viewCenter = returningView.center
@@ -100,14 +99,11 @@ extension CircularAnimationController:UIViewControllerAnimatedTransitioning {
     }
     
     func frameForCircle (withViewCenter viewCenter: CGPoint, size viewSize: CGSize, startPoint: CGPoint) -> CGRect {
-        let xLength = viewSize.width//fmax(startPoint.x, viewSize.width - startPoint.x)
-        let yLength = viewSize.height//fmax(startPoint.y, viewSize.height - startPoint.y)
-        
+        let xLength = viewSize.width
+        let yLength = viewSize.height
         let offestVector = sqrt(xLength * xLength + yLength * yLength) * 2
         let size = CGSize(width: offestVector, height: offestVector)
-        
         return CGRect(origin: CGPoint.zero, size: size)
-        
     }
     
 }

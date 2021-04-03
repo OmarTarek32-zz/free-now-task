@@ -21,6 +21,9 @@ class DriversMapView: MKMapView {
                                    BottomRightPointLong: bottomRightCoordinatePoint.longitude)
     }
     
+    var drivers: [DriverViewModel] = []
+    var selectedCarAnnotation: CarsAnnotationViewModel?
+    
     // MARK: - Public Functions
     
     func displayArea(in frame: MapFrameCoordinate) {
@@ -30,11 +33,29 @@ class DriversMapView: MKMapView {
     }
     
     func addDrivers(_ drivers: [DriverViewModel]) {
-        addAnnotations(drivers.map {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = $0.coordinate
-            return annotation
-        })
+        self.drivers = drivers
+        addAnnotations (
+            drivers.map {
+                let annotation = CarsAnnotationViewModel(coordinate:  $0.coordinate)
+                annotation.setHeading(CGFloat($0.heading))
+                return annotation
+            }
+        )
+    }
+    
+    func markAnnotationSelected(_ annotation: CarsAnnotationViewModel) {
+        // deselect the previous selection
+        if let selectedAnnotation = selectedCarAnnotation {
+            if let selectedAnnotationView = view(for: selectedAnnotation) as? CarsAnnotationView {
+                selectedAnnotationView.markUnSelected()
+            }
+        }
+        
+        // Select the current annotation
+        if let annotationView = view(for: annotation) as? CarsAnnotationView {
+            annotationView.markSelected()
+            selectedCarAnnotation = annotation
+        }
     }
     
     // MARK: - Private Functions
@@ -48,8 +69,4 @@ class DriversMapView: MKMapView {
         let p2 = MKMapPoint(coordinate1)
         return MKMapRect(x: fmin(p1.x,p2.x), y: fmin(p1.y,p2.y), width: fabs(p1.x-p2.x), height: fabs(p1.y-p2.y))
     }
-}
-
-class CustomPointAnnotation: MKPointAnnotation {
-    var imageName: String!
 }

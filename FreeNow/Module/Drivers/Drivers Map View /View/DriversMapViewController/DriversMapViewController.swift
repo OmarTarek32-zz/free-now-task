@@ -24,6 +24,9 @@ class DriversMapViewController: UIViewController, Navigatable {
             mapView.delegate = self
             mapView.showsUserLocation = true
             mapView.showsCompass = false
+            mapView.register(CarsAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+            mapView.register(CarsClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+
         }
     }
     
@@ -43,6 +46,9 @@ class DriversMapViewController: UIViewController, Navigatable {
                                                      BottomRightPointLat: 53.394655,
                                                      BottomRightPointLong: 10.099891)
     
+    private var drivers: [DriverViewModel] = []
+    private var selectedAnnotation: MKAnnotation?
+    
     // MARK: - Life Cycle Functions
     
     override func viewDidLoad() {
@@ -59,7 +65,7 @@ class DriversMapViewController: UIViewController, Navigatable {
         mapView.isRotateEnabled = false
         self.driversListViewBottomConstraint.constant = bottomSheetMinBottomMargin
     }
-    
+
     // MARK: - Functions
     
     func toggleListVisabilty() {
@@ -98,37 +104,13 @@ extension DriversMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         interactor?.fetchDrivers(in: self.mapView.currentMapFrameCoordinates)
     }
-    
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        if !(annotation is CarAnnoationView) {
-//            return nil
-//        }
-        
-//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: CarAnnoationView.reuseIdentifier)
-//
-//        if annotationView == nil {
-//            annotationView = CarAnnoationView(annotation: annotation, reuseIdentifier: CarAnnoationView.reuseIdentifier)
-//            annotationView?.canShowCallout = true
-//        } else {
-//            annotationView?.annotation = annotation
-//        }
-//
-//        annotationView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-//        annotationView?.annotation = annotation
-//        annotationView?.image = UIImage(named: "car")
-        
-        let annotationView = CarAnnotationView.instanceFromNib()
-        
-        return annotationView
-    }
-    
 }
 
 extension DriversMapViewController: DriversMapViewProtocol {
    
     func addDriversOnMap(_ drivers: [DriverViewModel]) {
         mapView.addDrivers(drivers)
+        self.drivers = drivers
         driversListView.addDrivers(drivers)
     }
     
@@ -141,9 +123,9 @@ extension DriversMapViewController: DriversOnMapListViewDelegate {
     
     func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didSelect driver: DriverViewModel, at indexPath: IndexPath) {
         
-        let annotation = mapView.annotations.first {
-            $0.coordinate.latitude == driver.coordinate.latitude && $0.coordinate.longitude == driver.coordinate.longitude }
-        mapView.selectAnnotation(annotation!, animated: false)
+        if let annotation = mapView.annotations.first(where: { $0.coordinate == drivers[indexPath.row].coordinate}) as? CarsAnnotationViewModel {
+            mapView.markAnnotationSelected(annotation)
+        }
     }
 }
 

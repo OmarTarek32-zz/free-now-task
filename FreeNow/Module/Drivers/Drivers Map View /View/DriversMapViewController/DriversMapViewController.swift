@@ -8,7 +8,19 @@
 import UIKit
 import MapKit
 
-class DriversMapViewController: UIViewController, Navigatable {
+class DriversMapViewController: UIViewController {
+    
+    // MARK: - Constants
+    
+    struct Animation {
+        struct Toggle {
+            static let duration: Double = 0.7
+            static let delay: Double = 0
+            static let springDamping: CGFloat = 0.5
+            static let initialSpringVelocity: CGFloat = 0.2
+            
+        }
+    }
     
     // MARK: - IBOutlets
     
@@ -65,15 +77,19 @@ class DriversMapViewController: UIViewController, Navigatable {
         mapView.isRotateEnabled = false
         self.driversListViewBottomConstraint.constant = bottomSheetMinBottomMargin
     }
+    
+    deinit {
+        mapView.delegate = nil
+    }
 
     // MARK: - Functions
     
     func toggleListVisabilty() {
         
-        UIView.animate(withDuration: 0.7,
-                       delay: 0,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 0.2,
+        UIView.animate(withDuration: Animation.Toggle.duration,
+                       delay: Animation.Toggle.delay,
+                       usingSpringWithDamping: Animation.Toggle.springDamping,
+                       initialSpringVelocity: Animation.Toggle.initialSpringVelocity,
                        options: UIView.AnimationOptions.curveEaseInOut,
                        animations: {
                         self.driversListViewBottomConstraint.constant = self.isBottomSheetOpen ? self.bottomSheetMinBottomMargin : self.bottomSheetMaxBottomMargin
@@ -94,7 +110,7 @@ class DriversMapViewController: UIViewController, Navigatable {
 extension DriversMapViewController: ErrorDisplaying {
     func showErrorView(title: String, subtitle: String) {
         let alert = UIAlertController(title: title, message: subtitle, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: Localization.string(for: .driversMapDismiss), style: UIAlertAction.Style.default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

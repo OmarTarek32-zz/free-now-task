@@ -35,7 +35,7 @@ class ErrorView: UIView, NibLoadable {
         retryButton.isHidden = true
     }
     
-    func configure(title: String = "Oops something went wrong!", subtitle: String) {
+    func configure(title: String = Localization.string(for: .errorMessageGeneric), subtitle: String) {
         titleLabel.text = title
         subTitleLabel.text = subtitle
     }

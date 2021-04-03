@@ -61,7 +61,7 @@ class DriversOnMapListView: UIView, NibLoadable {
     
     @IBAction private func toggoleViewVisabiltyAction(_ sender: UIButton) {
         didTapOnToggleView?()
-        showHideLabel.text = isShowen ? "Show" : "Hide"
+        showHideLabel.text = isShowen ? Localization.string(for: .driversMapShow) : Localization.string(for: .driversMapHide)
         isShowen.toggle()
     }
     

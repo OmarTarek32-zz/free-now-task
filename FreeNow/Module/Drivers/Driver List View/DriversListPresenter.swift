@@ -48,13 +48,13 @@ extension DriversListPresenter: DriversListPresenterProtocol {
     func didReceiveDrivers(_ drivers: [Drivers.Driver]) {
         
         if drivers.isEmpty {
-            view?.showErrorView(title: "", subtitle: "We did not find any drivers in Hamburg")
+            view?.showErrorView(title: "", subtitle: Localization.string(for: .driversListEmptyData))
         } else {
             view?.showDriversList(drivers.map(map(_:)))
         }
     }
     
     func didReceiveError(_ error: CustomNetworkError) {
-        view?.showErrorView(title: "We have encountered a problem", subtitle: error.localizedDescription)
+        view?.showErrorView(title: Localization.string(for: .encounteredProblem), subtitle: error.localizedDescription)
     }
 }

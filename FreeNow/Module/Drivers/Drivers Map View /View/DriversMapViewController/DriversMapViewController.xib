@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriversMapViewController" customModule="FreeNow" customModuleProvider="target">
+            <connections>
+                <outlet property="allDriversButton" destination="BsX-Le-akU" id="FRf-ih-sbl"/>
+                <outlet property="driversListView" destination="amW-es-4J0" id="HZG-Ai-Get"/>
+                <outlet property="driversListViewBottomConstraint" destination="fNg-u0-1ZR" id="9Cp-u8-2Xp"/>
+                <outlet property="mapView" destination="gVJ-JK-YAW" id="1QQ-fM-qwk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-JK-YAW" customClass="DriversMapView" customModule="FreeNow" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdA-NQ-v91">
+                    <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ndk-KZ-t8W"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amW-es-4J0" customClass="DriversOnMapListView" customModule="FreeNow" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="CeG-iM-VbU"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsX-Le-akU">
+                    <rect key="frame" x="312" y="44" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.15450398380967736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="2c9-w2-YSc"/>
+                        <constraint firstAttribute="width" secondItem="BsX-Le-akU" secondAttribute="height" multiplier="1:1" id="mSY-h3-9za"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="All Drivers">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="allDriversAction:" destination="-1" eventType="touchUpInside" id="jt4-9H-abH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gVJ-JK-YAW" secondAttribute="bottom" id="94m-Gj-WZ4"/>
+                <constraint firstItem="amW-es-4J0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KGW-RO-Wym"/>
+                <constraint firstItem="gVJ-JK-YAW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LXI-Dx-4An"/>
+                <constraint firstItem="NdA-NQ-v91" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V3d-dX-b4v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BsX-Le-akU" secondAttribute="trailing" constant="32" id="W9v-NR-0ip"/>
+                <constraint firstItem="gVJ-JK-YAW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yeh-9H-1Rn"/>
+                <constraint firstItem="BsX-Le-akU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aIi-ev-pji"/>
+                <constraint firstAttribute="bottom" secondItem="amW-es-4J0" secondAttribute="bottom" id="fNg-u0-1ZR"/>
+                <constraint firstItem="gVJ-JK-YAW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="faL-As-p5r"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NdA-NQ-v91" secondAttribute="trailing" id="hnt-xy-suO"/>
+                <constraint firstAttribute="bottom" secondItem="NdA-NQ-v91" secondAttribute="bottom" id="ydV-9M-zXB"/>
+                <constraint firstAttribute="trailing" secondItem="amW-es-4J0" secondAttribute="trailing" id="zVe-DW-tRi"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

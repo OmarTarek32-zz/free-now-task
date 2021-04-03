@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  FreeNow
+
+  Created by Omar Tarek on 4/3/21.
+  
+*/
+
+"error_message_generic" = "Oops, something went wrong!";
+"error_message_can_not_send_request" = "Can not send request";
+"error_message_can_not_read_data" = "Can not read data";
+"drivers_map_dismiss" = "Dismiss";
+"drivers_map_show" = "Show";
+"drivers_map_hide" = "hide";
+"encountered_problem" = "We have encountered a problem";
+"drivers_list_empty_data" = "We did not find any drivers in Hamburg";

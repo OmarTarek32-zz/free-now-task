@@ -65,6 +65,6 @@ protocol DriversRepositoryProtocol: DriversInteractorToRepositoryProtocol {
 // MARK: - Router Protocols
 
 protocol DriversRouterProtocol: DriversMapViewToRouterProtocol {
-    var sourceViewController: (UIViewController & Navigatable & UIViewControllerTransitioningDelegate)? { get }
+    var sourceViewController: (UIViewController & UIViewControllerTransitioningDelegate)? { get }
 }
 

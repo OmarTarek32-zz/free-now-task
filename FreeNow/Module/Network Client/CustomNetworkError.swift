@@ -21,13 +21,13 @@ enum CustomNetworkError: Error, LocalizedError {
     public var localizedDescription: String {
         switch self {
         case .canNotMapRequest:
-            return "Can not Send Request"
+            return Localization.string(for: .errorMessageCanNotSendRequest)
         case .canNotDecodeObject:
-            return "Can not read data"
+            return Localization.string(for: .errorMessageCanNotReadData)
         case .generic:
-            return "Something went wrong"
+            return Localization.string(for: .errorMessageGeneric)
         case .unknowen(let message):
-            return message ?? "Something went wrong"
+            return message ?? Localization.string(for: .errorMessageGeneric)
             
         }
     }

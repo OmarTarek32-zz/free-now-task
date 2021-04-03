@@ -24,6 +24,9 @@ class DriversMapViewController: UIViewController, Navigatable {
             mapView.delegate = self
             mapView.showsUserLocation = true
             mapView.showsCompass = false
+            mapView.register(CarsAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+            mapView.register(CarsClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+
         }
     }
     
@@ -43,6 +46,9 @@ class DriversMapViewController: UIViewController, Navigatable {
                                                      BottomRightPointLat: 53.394655,
                                                      BottomRightPointLong: 10.099891)
     
+    private var drivers: [DriverViewModel] = []
+    private var selectedAnnotation: MKAnnotation?
+    
     // MARK: - Life Cycle Functions
     
     override func viewDidLoad() {
@@ -59,7 +65,7 @@ class DriversMapViewController: UIViewController, Navigatable {
         mapView.isRotateEnabled = false
         self.driversListViewBottomConstraint.constant = bottomSheetMinBottomMargin
     }
-    
+
     // MARK: - Functions
     
     func toggleListVisabilty() {
@@ -104,6 +110,7 @@ extension DriversMapViewController: DriversMapViewProtocol {
    
     func addDriversOnMap(_ drivers: [DriverViewModel]) {
         mapView.addDrivers(drivers)
+        self.drivers = drivers
         driversListView.addDrivers(drivers)
     }
     
@@ -116,9 +123,9 @@ extension DriversMapViewController: DriversOnMapListViewDelegate {
     
     func driversOnMapListView(_ driversOnMapListView: DriversOnMapListView, didSelect driver: DriverViewModel, at indexPath: IndexPath) {
         
-        let annotation = mapView.annotations.first {
-            $0.coordinate.latitude == driver.coordinate.latitude && $0.coordinate.longitude == driver.coordinate.longitude }
-        mapView.selectAnnotation(annotation!, animated: false)
+        if let annotation = mapView.annotations.first(where: { $0.coordinate == drivers[indexPath.row].coordinate}) as? CarsAnnotationViewModel {
+            mapView.markAnnotationSelected(annotation)
+        }
     }
 }
 
@@ -127,14 +134,14 @@ extension DriversMapViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         circularAnimationController.transitionMode = .present
         circularAnimationController.startingPoint = allDriversButton.center
-        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        circularAnimationController.circleColor = allDriversButton.backgroundColor ?? .white
         return circularAnimationController
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         circularAnimationController.transitionMode = .dismiss
         circularAnimationController.startingPoint = allDriversButton.center
-        circularAnimationController.circleColor = allDriversButton.backgroundColor!
+        circularAnimationController.circleColor = allDriversButton.backgroundColor ?? .white
         return circularAnimationController
     }
 }
